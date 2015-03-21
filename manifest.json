@@ -1,0 +1,29 @@
+{
+  "name": "Lorea 2.0 Backup Holder",
+  "description": "Your Lorea's back ups.",
+  "homepage_url": "https://n-1.cc/discussion/view/2095202/lorea-reloaded-spring-summer-autumn-2015-plugin-inhabitant-backups",
+  "version": "0.0.0",
+  "manifest_version": 0,
+  "icons": {
+    "128": "src/images/icon_128.png"
+  },
+  "browser_action": {
+    "default_title": "Lorea - back ups",
+    "default_icon": "src/images/icon_128.png",
+    "default_popup": "src/html/popup.html"
+  },
+  "background": {
+    "page": "src/html/background.html"
+  },
+  "permissions": [
+    "tabs", "storage", "clipboardRead", "clipboardWrite", "contextMenus", "notifications", "unlimitedStorage"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["src/js/frontend/scripts/inject.js"]
+    }
+  ],
+  "options_page": "src/html/index.html#/settings",
+  "minimum_chrome_version": "34.0"
+}
