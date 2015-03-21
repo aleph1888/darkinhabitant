@@ -1,4 +1,4 @@
-Lorea - back ups APP [![Build Status](https://drone.io/github.com/darkwallet/darkwallet/status.png)](https://drone.io/github.com/darkwallet/darkwallet/latest) [![Code Quality](https://codeclimate.com/github/darkwallet/darkwallet.png)](https://codeclimate.com/github/darkwallet/darkwallet) [![Coverage Status](https://coveralls.io/repos/darkwallet/darkwallet/badge.png?branch=develop)](https://coveralls.io/r/darkwallet/darkwallet?branch=develop)
+Lorea - back ups APP [![Build Status](https://drone.io/github.com/lorea/lorea-bup_holder/latest/status.png)](https://drone.io/github.com/lorea/lorea-bup_holder/latest) [![Code Quality](https://codeclimate.com/github/lorea/lorea-bup_holder.png)](https://codeclimate.com/github.com/lorea/lorea-bup_holder) [![Coverage Status](https://coveralls.io/repos/lorea/lorea-bup_holder/badge.png?branch=develop)](https://coveralls.io/r/lorea/lorea-bup_holder/?branch=develop)
 ===========
 
 We love flowers, and, also, we love petals falling down from above the haulm.
