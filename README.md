@@ -1,4 +1,4 @@
-Lorea - back ups APP [![Build Status](https://drone.io/github.com/lorea/lorea-bup_holder/latest/status.png)](https://drone.io/github.com/lorea/lorea-bup_holder/latest) [![Code Quality](https://codeclimate.com/github/lorea/lorea-bup_holder.png)](https://codeclimate.com/github.com/lorea/lorea-bup_holder) [![Coverage Status](https://coveralls.io/repos/lorea/lorea-bup_holder/badge.png?branch=develop)](https://coveralls.io/r/lorea/lorea-bup_holder/?branch=develop)
+Lorea - back ups APP
 ===========
 
 We love flowers, and, also, we love petals falling down from above the haulm.
