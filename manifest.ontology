@@ -6,11 +6,7 @@ ABSTRACT
 
 START-UP 
 -------------
-On rtCheckCalls side: I would try here to recover from directory: 
-
-"/templates/js" 
-
-... the three modules: 
+On rtCheckCalls side the three modules: 
 
 a) AMI "retroactivity"
 b) TREE "category-item menu controller"
@@ -26,25 +22,6 @@ Then, by DW's model of a "backup controller", located on their github repo[1.2]:
 
 ... join like a darkinhabitant[2] petal... 
 
-CALL FOR CODERS
------------
-See you around next chapter, bye, bye, last poem:
-
-from a flower 
-falls a petal[2.1], 
-from the servers above 
-as it is explained 
-in Lorea group's discussion 
-on Code subgroup 
-on N-1.cc 
-about 
-the "Lorea-back up holder" 
-for an Elgg2.0 
-inhabitant back ups 
-plugin.
-
-«Claro como (...) para que todos atiendan; oscuro como (...) para que nadie comprenda.» by Spanish poet Antonio Machado. Beloved 99_effect for Ariadnas's thread. 
-
 Join the falling down 
 by getting an account 
 on n-1.cc and/or 
@@ -54,15 +31,10 @@ TIME-CONTEXT
 --------------
 On the context of a Lorea's spring-summer-autumn 2015 semi-permanent hackathon[3] (apócrifo?!) Visit the blog[3.1]!
 
-AGREEMENTS
---------------
-Keep on rocking in the free world... who love the lovers?
-Judge's Ontologist Assembly of the Unarchist of Magiks and object-oriented way of living, Hakim Bey... who feeds the feeders?
-
 REFERENCES
 -----------------
 [1]		 https://github.com/lorea/rtcheckcalls/pull/1
-[1.1] 	 github.com/aleph1888/darkinhabitant/src/js/lorea.js
+[1.1]  github.com/aleph1888/darkinhabitant/src/js/lorea.js
 [1.2]	 github.com/darkwallet/darkwallet/src/js/frontend/controllers/backup.js"
 [2]		 https://github.com/aleph1888/darkinhabitant
 [2.1]	 https://n-1.cc/discussion/view/2095202/lorea-reloaded-spring-summer-autumn-2015-plugin-inhabitant-backups
