@@ -1,0 +1,42 @@
+
+ABSTRACT
+-------------
+«... while building fluid and responsive APPcache based client-rendered UI's through JavaScript API; and while managing packages by RequireJS; and "auth-as-a-service" federating with oAuth or OpenID; we will use AngularJS to connect front and backend, by controlling some modules that binds data models between user interfaces and content deploying servers.» Ok, in short: «We are going to play around APP's, or some browser extensions, or some downloadable media pill... to be mobile-device consumed. Doing it in a Elgg2.0-lorea based taste!» 
+
+
+START-UP 
+-------------
+On rtCheckCalls side the three modules: 
+
+a) AMI "retroactivity"
+b) TREE "category-item menu controller"
+c) DATA "model binder"
+
+... and Angularize in an API with starting-entry as such as the one reposited on "develop" branch, called lorea.js[1.1], just thinking of a kind of back up holder.
+
+... but, remember my cloak, they are very trash coded.
+
+Then, by DW's model of a "backup controller", located on their github repo[1.2]:
+
+"src/js/frontend/controllers/backup.js"
+
+... join like a darkinhabitant[2] petal... 
+
+Join the falling down 
+by getting an account 
+on n-1.cc and/or 
+github.com! 
+
+TIME-CONTEXT
+--------------
+On the context of a Lorea's spring-summer-autumn 2015 semi-permanent hackathon[3] (apócrifo?!) Visit the blog[3.1]!
+
+REFERENCES
+-----------------
+[1]		 https://github.com/lorea/rtcheckcalls/pull/1
+[1.1]  github.com/aleph1888/darkinhabitant/src/js/lorea.js
+[1.2]	 github.com/darkwallet/darkwallet/src/js/frontend/controllers/backup.js"
+[2]		 https://github.com/aleph1888/darkinhabitant
+[2.1]	 https://n-1.cc/discussion/view/2095202/lorea-reloaded-spring-summer-autumn-2015-plugin-inhabitant-backups
+[3] 	 https://loreareloaded.github.io
+[3.1]	 https://n-1.cc/blog/view/2095213/lorea-reloaded-spring-summer-autumn-2015
