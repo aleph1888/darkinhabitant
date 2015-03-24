@@ -47,12 +47,12 @@ You are welcome to participate in the development by contributing or forking the
 
 More info about how to develop on the [HACKING.md](HACKING.md) document.
 
-Other useful documents are: [HD Structure](https://wiki.unsystem.net/en/index.php/DarkWallet/HDWallet), [How to Help](https://wiki.unsystem.net/en/index.php/DarkWallet/HowToHelp) and [Debugging](https://wiki.unsystem.net/en/index.php/DarkWallet/Debug)
+Other useful documents are: [HD Structure](https://n-1.cc/dokuwiki/17605/doku.php?id/HDBUP_Holder), [How to Help](https://n-1.cc/dokuwiki/17605/doku.php?id=howtohelp) and [Debugging](https://n-1.cc/dokuwiki/17605/doku.php?id=debug)
 
 
 Translations
 -----------
-Changes to translations as well as new translations can be submitted to [Darkwallet's Transifex page](https://www.transifex.com/projects/p/lorea/lorea-bup_holder).
+Changes to translations as well as new translations can be submitted to [Lorea's Transifex page](https://www.transifex.com/projects/p/lorea/lorea-bup_holder).
 
 Translations are periodically pulled from Transifex and merged into the git repository.
 
@@ -87,7 +87,7 @@ Support our development efforts by donating to the Lorea-bup_holder multisig:
 
 --
 
-> Es evidente la necesidad de un cambio en
+> (...) «Es evidente la necesidad de un cambio en
 profundidad, de cambiar la actual estructura y ello sólo
 puede llegar en la medida que aumente la libertad de
 pensar y sentir. Mas como precisamente la función primordial
@@ -104,7 +104,7 @@ habrá de consistir esa nueva estructura. Por ejemplo:
 observar cómo vivimos, totalmente descoordinados, lo
 social, lo natural y lo individual, a lo que nos conduce la
 lucha por el Poder, la “política” (conceptos como el de
-Poder necesitados de un serio análisis).
+Poder necesitados de un serio análisis) (...)».
 >
 > -- <cite>Jesús Lizano</cite>
 
