@@ -1,4 +1,4 @@
-Check other [Lorea Spring-summer-autumn semipermanent-hackathon 2015] in Lorea's group on n-1.cc events taking place now:
+Check other events taking place on [Lorea Spring-summer-autumn semipermanent-hackathon 2015] in Lorea's group on n-1.cc, 'don't just use it, join us!' 
 
 Here and now, focusing on:
 
