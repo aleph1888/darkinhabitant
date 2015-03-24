@@ -1,3 +1,7 @@
+Check other [Lorea Spring-summer-autumn semipermanent-hackathon 2015] in Lorea's group on n-1.cc events taking place now:
+
+Here and now, focusing on:
+
 Lorea - back ups APP
 ===========
 
