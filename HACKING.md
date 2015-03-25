@@ -1,7 +1,7 @@
 Darkinhabitant Development
 ==========
 
-You are rather encouraged to participate in the development of serious projects as [Darkwallet](https://wiki.unsystem.net/index.php/DarkWallet) or [Lorea](https://gitorious.org/lorea/), but if you still have some extra energy, here welcome to participate in the development by contributing or forking the code at:
+You are rather encouraged to participate in the development of serious projects as [Darkwallet](https://wiki.unsystem.net/en/index.php/Darkwallet) or [Lorea](https://gitorious.org/lorea/), but if you still have some extra energy, here welcome to participate in the development by contributing or forking the code at:
 
 https://github.com/aleph1888/darkinhabitant
 
