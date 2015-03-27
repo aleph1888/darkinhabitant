@@ -1,0 +1,841 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Darkinhabitant, a pervert guide to TIC by aleph1888</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Darkinhabitant, a pervert guide to TIC</h1>
+        <p>Habitante policromático, guía lumpen a las TIC</p>
+
+        <p class="view"><a href="https://github.com/aleph1888/darkinhabitant">View the Project on GitHub <small>aleph1888/darkinhabitant</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/aleph1888/darkinhabitant/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/aleph1888/darkinhabitant/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/aleph1888/darkinhabitant">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <p></p>
+
+<p><strong>Preámbulo</strong>:</p>
+
+<p>Lorea reloaded, Célula Coders [# 1, by the date; de momento célula de uno], «no nos mires ¡únete! don't just use it, join the party!».</p>
+
+<p>¡Se buscan coders para la operación <strong>Lorea Reloaded </strong><em>Spring-Summer-Autumn 2015</em>! Únete en el grupo de <a href="https://n-1.cc/g/lorea+code">Code</a> si solo vas a opinar y criticar, y pasa al <a href="https://n-1.cc/discussion/owner/88309">hackathons</a> si además vas ¡a pulir piedra!</p>
+
+<p><strong>tags</strong>: weiks, oikonomia, oikos, Elgg2.0, Client-rendered UI's</p>
+
+<p>CHAPTER ZERO:<strong> How do we survive while gardenering / Cómo sobrevivimos mientras codeamos en el jardín</strong>. CHAPTER ONE: <strong>Lorea seed / La semilla de la flor</strong>. CHAPTER TWO: <strong>The goal / La meta. </strong>CHAPTER THREE: <strong>Heavy metal code! / Vemos qué se va a construir.</strong> CHAPTER FOUR<strong>: </strong> <strong>Technical premises and other mechanical axiomatic considerations / Algunas cosas que habría que tener en cuenta para no pringarla nada más empezar.</strong> CHAPTER FIVE<strong>: </strong> <strong>Magnetic'em all / ¡Vale, poniéndonos el mono de faena!</strong> CHAPTER SIX<strong>: </strong> <strong>Conclusions and derivations: SCRUMer way of life / Recapitulación y calendario. </strong>CHAPTER SEVEN<strong>: </strong> <strong>References &amp; notes / Consejas y pautas.</strong> CHAPTER EIGHT<strong>: </strong> <strong>The project: darkinhabitant, a lorea petal falls down / El projecto: habitante policromático: caen pétalos desde Lorea.</strong></p>
+
+<p> </p>
+
+<p><img alt="image" src="https://eartesania.files.wordpress.com/2014/01/separador.png"><strong> </strong></p>
+
+<p><strong>CHAPTER ZERO: </strong></p>
+
+<p><strong>How do we survive while gardenering / Cómo sobrevivimos mientras codeamos en el jardín</strong></p>
+
+<p> </p>
+
+<p> </p>
+
+<p> </p>
+
+<p>[English]--------------------------</p>
+
+<p>Hi,</p>
+
+<p>This is to take on consideration how do we survive while gardering in Loreas's garden.</p>
+
+<p>The idea of this discussion is to summerize our options and to set starting points to commit them.</p>
+
+<p> </p>
+
+<p>[Spanish]----------------------</p>
+
+<p>Buenas,</p>
+
+<p>Mientras que alguna formación política de nueva generación estructurada en círculos de acción ciudadana no acabe de asaltar el cielo rompiendo con el bipartidismo del régimen del 78 que ha vendido nuestra sociedad a las élites financieras mundiales e instaure por decreto ley una renta básica popular que nos permita dedicarnos a nuestras labores sin preocuparnos del hambre, el techo y los vicios (sin vicios no hay virtudes...) propios y de nuestros familiares, alguien ha cuestionado la viabilidad del "Lorea Reloaded <em>Primavera-verano-otoño 2015 hackathon semipermanente</em>,", que es un tema no por sempiterno menos vigente y necesario de tratar, cuestionándolo en términos de liquidez económica.</p>
+
+<p>Abro este hilo, que luego podría traspasarse a la wiki o a otro lado más pertinente, para ir recopilando propuestas de generación de ingresos y de reparto entre los jardineros que tengan a bien pasarse durante estas tres estaciones por los jardines de Lorea.</p>
+
+<p> </p>
+
+<p>[English]--------------------</p>
+
+<p>Proposition #1: (Criptographic<strong>) crowdfunding, microcredits &amp; microtasks</strong>.</p>
+
+<p>The proposition here is<strong> to use some <a href="https://whispersystems.org/blog/bithub/">bithub </a>based platform</strong> to underneath the gardenering tasks.</p>
+
+<p>Installation summerized process:</p>
+
+<blockquote>
+<p>a) Install Java:</p>
+
+<p>- <a href="https://launchpad.net/ubuntu/+source/openjdk-7">https://launchpad.net/ubuntu/+source/openjdk-7</a></p>
+
+<p>b) Install Apache Maven:</p>
+
+<p>- <a href="http://maven.apache.org/guides/getting-started/maven-in-five-minutes.html">http://maven.apache.org/guides/getting-started/maven-in-five-minutes.html</a></p>
+
+<p>c) Get Github and Coinbase accounts:</p>
+
+<p>- <a href="https://github.com">https://github.com</a></p>
+
+<p>- <a href="https://www.coinbase.com/">https://www.coinbase.com/</a></p>
+
+<p>d) Install Bithub:</p>
+
+<p>- <a href="https://github.com/WhisperSystems/BitHub/blob/master/README.md">https://github.com/WhisperSystems/BitHub/blob/master/README.md</a></p>
+</blockquote>
+
+<p> </p>
+
+<p>[Spanish]</p>
+
+<p>Propuesta #1: <strong>Microreparto de microfinanciación colectiva</strong> (en moneda criptográfica)</p>
+
+<p>Esta propuesta se vertebra en los conceptos de los microcréditos y la financiación multitudinaria sobre los ejes de la propiedad colectiva. En síntesis, la propuesta propone:<strong> habilitar un entorno (o repositorio) de programación distribuida (tipo git) capaz de recibir las microdonaciones y capaz de asignarlas a microtareas que una vez realizadas y <em>commiteadas </em>liberen la retribución correspondiente al coder que efectúa el <em>pull request</em>.</strong></p>
+
+<p>En este paradigma, por encima de monedas fiduciarias y monedas sociales, las monedas criptográficas ofrecen desde ya entornos habilitadores de tal modelo. Es un ejemplo de esto bithub: <a href="https://whispersystems.org/blog/bithub">https://whispersystems.org/blog/bithub</a>.</p>
+
+<p>Ni que decir tiene que la experiencia podría derivar idealmente, mediante y durante ulteriores hackathones, en el desarrollo de herramientas API para incorporar al entorno <em>monedas sociales</em> como<a href="https://www.integralces.net/?lang=es"> iCES</a> (sistema que a día de hoy ya implementa OpenTransact y OAuth2); o, en la misma línea, integrar la plataforma dentro de la <a href="https://www.fair.coop/fairnetwork">red </a><a href="https://fair.coop/">Fair.coop</a> usand <a href="https://fair.coop/es/faircoop/"><em>faircoins </em></a>en lugar de <em>bitcoins</em> para lo cual sería muy útil, a priori, incluir el proyecto de esta <em>plataforma de microremuneración distribuida</em> en <a href="https://fair.coop/es/fairstarts-una-red-de-incubadoras-para-la-economia-colaborativa-y-la-produccion-p2p/">la incubadora de la cooperativa justa</a>.</p>
+
+<p> </p>
+
+<p> </p>
+
+<p><img alt="image" src="https://eartesania.files.wordpress.com/2014/01/separador.png"><strong> </strong></p>
+
+<p><strong>CHAPTER ONE: </strong></p>
+
+<p><strong>Lorea seed / La semilla de la flor</strong></p>
+
+<p> </p>
+
+<p> </p>
+
+<p>[English]--------------------------</p>
+
+<p>Hi, It'd be nice to use this discussion to manage the updating of the tutorial to install local seed, located on this wiki's group.</p>
+
+<blockquote>
+<p><a href="https://n-1.cc/dokuwiki/17605/doku.php?id=tutorial_to_install_local_seed">https://n-1.cc/dokuwiki/17605/doku.php?id=tutorial_to_install_local_seed</a></p>
+</blockquote>
+
+<p>Every thing needed to be updated should finish on new version tutorial:</p>
+
+<blockquote>
+<p><a href="https://n-1.cc/dokuwiki/17605/doku.php?id=tutorial_to_install_1.8_local_seed">https://n-1.cc/dokuwiki/17605/doku.php?id=tutorial_to_install_1.8_local_seed</a></p>
+</blockquote>
+
+<p> </p>
+
+<p>[Spanish]------------------------</p>
+
+<p>Asunto: Manual de instrucciones instalación local para desarrollo.</p>
+
+<p>Quisiera valorar conjuntamente si el manual de instalación (que parece obsoleto) de una semilla local para desarrollo ubicado en:</p>
+
+<blockquote>
+<p><a href="https://n-1.cc/dokuwiki/17605/doku.php?id=tutorial_to_install_local_seed">https://n-1.cc/dokuwiki/17605/doku.php?id=tutorial_to_install_local_seed</a></p>
+</blockquote>
+
+<p>... es buen cabo para arrancar o no. Claramente, en su cabecera se indica la url para la versión 1.8, que está vacío:</p>
+
+<blockquote>
+<p><a href="https://n-1.cc/dokuwiki/17605/doku.php?id=tutorial_to_install_1.8_local_seed">https://n-1.cc/dokuwiki/17605/doku.php?id=tutorial_to_install_1.8_local_seed</a></p>
+</blockquote>
+
+<p>... y, quizás, aprovechando, se podría completar, ¿alguien conoce los matices que han variado en cuanto al proceso de instalación respecto del manual anterior?</p>
+
+<p> </p>
+
+<p><img alt="image" src="https://eartesania.files.wordpress.com/2014/01/separador.png"></p>
+
+<p><strong>CHAPTER TWO: </strong></p>
+
+<p><strong>The goal / La meta</strong></p>
+
+<p> </p>
+
+<p>[English]----------------</p>
+
+<p>Elgg 2.0 Plugin for inhabitant backups</p>
+
+<p><strong>Brainstorming</strong></p>
+
+<p>This is to list proposed perspectives to achieve<strong> the backup per inhabitant plugin </strong>goal.</p>
+
+<p>Summerizing current possibilities:</p>
+
+<ul>
+    <li>APP like by caching content offline</li>
+    <li>REST-API like client/webservices</li>
+    <li>Pseudo-admin back up</li>
+    <li>Generating compressed file "on the fly"</li>
+</ul>
+
+<p><strong>1) APP like by caching content offline</strong></p>
+
+<p>There is some kind of<em> "A secure, offline-capable, mobile-first web client for Elgg built with AngularJS."</em> on <a href="https://github.com/ewinslow/ng-elgg">https://github.com/ewinslow/ng-elgg</a> where an APP model gets in the scene, on<a href="https://community.elgg.org/discussion/view/1579767/evan-winslow-great-thinking-about-the-elgg-20-consider-reading-it?offset=10"> Elgg Comunity forums</a>, we can read main points:</p>
+
+<blockquote>
+<ul>
+    <li>View logic is rendered on the client, therefore not burdening server CPU or memory.</li>
+    <li>The app's assets will be cached offline, therefore not burdening the server with requests for the same assets on repeat visits.</li>
+    <li>The app's assets are cached offline, so users startup experience in many cases is bounded by JS parse and execution time, not network RTT and server response time. If you don't have the data cached offline yet, then you do still need to take the network hit, unfortunately.</li>
+    <li>The app's assets are static, so no need for PHP to run when they're first requested.</li>
+    <li>It will be trivially easy to make sure that all assets are minified and compressed, including optimizing images and minifying HTML templates.</li>
+    <li>Everything is executed async and as-needed with RequireJS/AMD to minimize JS parse/execution time, instead of loading the WHOLE app in 1 giant JS file up front, which would kill startup time on mobile because Elgg is HUUUGE. Only the minimum JS for the current page is run, then as you load more pages more JS is loaded to work in those pages. It's really quite cool if I do say so myself.</li>
+    <li>Even entities and lists of entities will be cached offline so users will be able to get stale data in a few milliseconds (effectively instantly). That data is then updated in the background from the server.</li>
+</ul>
+</blockquote>
+
+<p><strong>2) REST-API like client/webservices</strong></p>
+
+<p>The idea here is to use some JS/HTML/CSS user interface to display data that is pulled from <a href="http://docs.elgg.org/wiki/Web_Services">Elgg webservices</a> by using <em>user authentication and api key</em>. There is an already developed plugin based on this: <a href="https://www.marcus-povey.co.uk/2009/08/25/using-elggs-rest-like-api/">https://www.marcus-povey.co.uk/2009/08/25/using-elggs-rest-like-api/</a> , that could be used as a model. In developer's own word, the process (for newbies) should go as:</p>
+
+<blockquote>
+<ul>
+    <li>expose a function as a web services method and get it working without any authentication from a web browser</li>
+    <li>start calling the method from a client application on your computer (PHP cli, Python, Java, etc). You can take a look at the client libraries put together for Flickr or Twitter for an idea of how to build a simple client</li>
+    <li>add authentication - first API and then user</li>
+    <li>move to the client.</li>
+    <li>build out your web services API and the client application</li>
+</ul>
+</blockquote>
+
+<p><strong>3) Pseudo-admin back up</strong></p>
+
+<p>Another approach, mainly for advanced inhabitants, could be the customization of <em>a generic admin backup plugin</em> like<a href="http://https://community.elgg.org/plugins/1329896/releases/1.0"> </a><a href="https://community.elgg.org/plugins/1329896/releases/1.0">https://community.elgg.org/plugins/1329896/releases/1.0</a> to perform a selective and dedicated<a href="http://learn.elgg.org/en/stable/admin/backup-restore.html"> backup that user could recreate on another installation</a>.</p>
+
+<p><strong>4) Generating compressed file "on the fly"</strong></p>
+
+<p>By the way, it seems a lot easier, some kind of <strong>only one-time-use</strong> approach combining 1) and 2) just looping on inhabitant profile and generating some XML file that can be downloaded to be consumed offline. Here we are thinking on <em>Twitter backup request</em> example.</p>
+
+<p>Backup process should create a unique compressed file consisting in static HTML5 (XML) plus content folder (images, etc.)  and the plugin should take care about storing quote on disk and downloading dead line.</p>
+
+<p> </p>
+
+<p><img alt="image" src="https://eartesania.files.wordpress.com/2014/01/separador.png"><strong> </strong></p>
+
+<p><strong>CHAPTER THREE: </strong></p>
+
+<p><strong>Heavy metal code! / Vemos qué se va a construir</strong></p>
+
+<p> </p>
+
+<p> </p>
+
+<p>[English]---------</p>
+
+<p>Some little son of Eris, and so on nevertheless while keep on surfing on the edge of his stupidity, talks about <a href="https://n-1.cc/discussion/view/2095287/lorea-reloaded-spring-summer-autumn-2015-how-do-we-survive-while-gardenering-como-sobrevivimos-mientras-codeamos-en-el-jardin">how do we survive while gardenering and while seeding...</a> this is a thread to go through.</p>
+
+<p>The fucking little bastard of Eris could keep his mouth closed, however, nertheless and so on, he carries a hand repeatly to his nouse... while trying to give <strong>a Lorea-lorea SCRUMer Elgg2.0 plugi</strong>n and<strong> a darkinhabitant APP</strong> a suitable definition. Sorry, I tried to translate but it seems to me too naive and naïf.</p>
+
+<p>At last, the pussy testohacker points to <strong>some trashed project</strong> he has done about <strong>a Mangopay gateway to Wordpress through EasyDigitalDownloads</strong> kit and talks about lisergic-quemical paradigsm fathered by Albert Hoffman.</p>
+
+<p>Well... I did my best in translation! Some one could help.</p>
+
+<p>Party on?</p>
+
+<p>Spring 2015 Week#01</p>
+
+<p> </p>
+
+<p>[Spanish]---------</p>
+
+<p>Buenas,</p>
+
+<p>... yo era un pequeño bastardo hijo de Eris, un tristón non serviam, maldita marioneta obrera al servicio de instituciones y caciques: yo era un ilota cuando no un esclavo de <em>tripalliare</em>.</p>
+
+<p>... entonces, decíamos, venía llorado de antes... recapitulo para que consolide el hilo discursivo....</p>
+
+<p>... siguiendo el hilo de la <a href="https://n-1.cc/blog/view/2095213/lorea-reloaded-spring-summer-autumn-2015">Lorea pri-ver-oto 2015 semipermanent hackathon</a>, estaba pensando en cómo calculan la hipotenusa un matemático y un ingeniero [1], y, entonces, pensando en el tema de "<strong>la plataforma microremuneradora</strong>" en ese <a href="https://n-1.cc/discussion/view/2095202/lorea-reloaded-spring-summer-autumn-2015-plugin-inhabitant-backups">hilo sobre el plugin de inhabitatns backups Elgg2.0</a>, he visto esto de alguien que no conozco y no puedo opinar si no me los instalo lo pruebo, como plataforma de reparto por méritos <a href="http://www.spliddit.org/apps/credit">spliddit.</a></p>
+
+<p>Ahora voy a verlo, pero, cuando se habló de un servicio en Java como Bithub que conecta una cuenta de Github con una de Coinbase, no sé si se especificó, ahora lo haría, que el servicio debe mediar la remuneración de unas tareas que se hayan realizado en un proceso productivo regulado por SCRUM. Mejor en Redmine.</p>
+
+<p>De ahí <strong>el plugin Elgg2.0 Lorea-lorea_SCRUMer</strong>. Algo parecido a ese spliddit, ahora lo miraremos, molaría que alguien lo criticara, usarlo como carcasa para incorporarle los<em> Lorea-lorea_SCRUMer plugin</em>, que sean estos:</p>
+
+<blockquote>
+<p>Un plugin para Elgg2.0 capaz de vincular a un darkinhabitant a la pila de springs y al bloque de evaluaciones de un equipo de desarrollo que está SCRUMeando algún proyecto en un Redmine o similares.</p>
+</blockquote>
+
+<p>La idea de que el <em>darkinhabitant </em>esté conectado a Lorea-Elgg2.0 y, rizomáticamente, y este <strong>rizomatismo </strong>es de vital importancia porque <strong>siembra estrellas</strong>, que esté vinculado con el Lorea-lorea_SCRUMer plugin a su calendario de gantt, es que, a la postre, sus carteras, tanto de moneda fiduciaria como de crédito en sistemas de intercambio o criptográficos, reflejen el resultado. Todo bien recogidito en un anillo de llaves en un llavero USB con una pegatina que muestre un puño, ahogándose el dueño del puño, zizekiano último frame de la pelicula The pervert guide to Ideology.</p>
+
+<p>Este tutorial y este proyecto es pos-titanis. Nada de arquitecturas basadas en clase para largas travesías transoceánicas entre potencias hegemónicas dominantes. Quiere decirse que... bueno, al grano.</p>
+
+<p>Yo personalmente, no veo esto como un "capítulo aparte" tipo el que <a href="http://www.cyanogenmod.org/blog/a_new_chapter">dio CyanogenMod cuando se quitó el Mod</a>. Pero, sí, de algún modo, en este tutorial poszizekiano se anda buscando ROM's y caché. Ahí se apunta a una presencia concreta del proyecto. Así que la estela de <a href="http://www.xatakandroid.com/productividad-herramientas/carbon-te-permite-hacer-copias-de-seguridad-de-tus-aplicaciones-y-datos-en-android-sin-ser-root">Carbon</a> para las backups y el <a href="http://www.xatakandroid.com/productividad-herramientas/clockworkmod-superuser-ya-disponible-en-google-play">Clockwork </a>(<a href="https://github.com/koush/Superuser">https://github.com/koush/Superuser</a>) para el darkinhabitant habrá que seguirla. Aunque solamente sea por referencias macrodimensionales.</p>
+
+<p>Yo creo que, sin mucho lío:</p>
+
+<blockquote>
+<p>un <em>Darkinhabitant </em>es un avatar federado vía openID o vía oAuth a una red que alberga una base de datos con memoria colectiva. Diría que un usuario de Lorea-Elgg 2.0, con una Darkwalllet, una fairwallet, y una cuenta en una comunidad de intercambio es un darkinhabitant.</p>
+</blockquote>
+
+<p>No creo que yo aquí esté diciendo tampoco nada que no se lea en el ambiente. Me limito a to put in together, lo que se ve que está haciendo la peña.</p>
+
+<p>Bueno, pues, nada, caña por<a href="https://github.com/aleph1888/torsocks"> un tubo</a>!</p>
+
+<p>Estoy por ver si me gasto los 0.67 btc que me gané haciéndole una customization a alguien a través de un gitlab privado sobre la pasarela <a href="https://github.com/aleph1888/mangopay_edd_plugin_web">EasyDigitalDownloads Mangopay gateway</a> comprándome unos ácidos en Silk Road 2.0, o si me conformo leyéndome el librito <em>eleesedero </em>que aquí el caballero ha biografiado de las fuentes  y publicita en el foro de la orden [2] e invierto esto en el primer Sprint de este proyecto.</p>
+
+<p>Now playing: Gojira, <em>l'enfant sauvage</em>!</p>
+
+<p>What, bailas?</p>
+
+<p>Primavera 2015, semana #01</p>
+
+<p>Push the power on button!!!!!</p>
+
+<p><img alt="Lorea (spring-summer-autumn) 2015 a semi-hackathon:" src="https://raw.githubusercontent.com/aleph1888/darkinhabitant/develop/img/darkhabitant.png"></p>
+
+<p>¡El rey va desnudo!</p>
+
+<p>REFERENCIAS:</p>
+
+<p>[1] <a href="http://cifrasyteclas.com/2013/03/22/como-calculan-la-hipotenusa-un-matematico-y-un-ingeniero/">http://cifrasyteclas.com/2013/03/22/como-calculan-la-hipotenusa-un-matematico-y-un-ingeniero/</a></p>
+
+<p>[2] <a href="http://www.sanchezdrago.com/foro/viewtopic.php?p=44392#44392">http://www.sanchezdrago.com/foro/viewtopic.php?p=44392#44392</a></p>
+
+<p> </p>
+
+<p><img alt="image" src="https://eartesania.files.wordpress.com/2014/01/separador.png"><strong> </strong></p>
+
+<p><strong>CHAPTER FOUR: </strong></p>
+
+<p><strong>Technical premises and other mechanical axiomatic considerations / Algunas cosas que habría que tener en cuenta para no pringarla nada más empezar</strong></p>
+
+<p> </p>
+
+<p>[English]----------------</p>
+
+<p>By approaching what seems to be the easiest way to get the plugin: <strong>4) Generating compressed file "on the fly"</strong>, here it is some very generic overview of the flow and element steps.</p>
+
+<p>We consider a "<strong>Backup Class</strong>" which would take care of coursing backup orders; and a "<strong>Backup Cron</strong>" which would manage the orders:</p>
+
+<p> </p>
+
+<p><img alt="" src="https://lakurrealidad.files.wordpress.com/2015/03/backup-plugin.png"></p>
+
+<p> </p>
+
+<p>Ok, then, pickup the point of view, up to IRC server.</p>
+
+<p>Rollero and Aleph find each other on 17/03/2015 irc#lorea meeting.</p>
+
+<p>Rollero says that<strong> this plugin is not worth for current Lorea version</strong>. But he says that bithub sounds good. He also makes Aleph to notice that <strong>a Group belongs to an Owner rather to an inhabitant</strong>, and he dares to coders the possibility to manage that.</p>
+
+<p>Aleph tells Rollero that <strong>there are some inhabitant needing this plugin</strong> and that this could be a reason to develop it. He also explains that<strong> if there were some quorum in the </strong>lorea-reloaded-spring-summer-autumn-2015 semipermanent <strong>hackathon the task list could grow</strong> and be priorized.</p>
+
+<p> </p>
+
+<p>[Spanish]----------</p>
+
+<p>(20:04:00) <strong>rollero:</strong> q tal aleph?<br>
+(20:04:46) <strong>aleph:</strong> Very good, pero un poco mojao que ha caído una buena esta tarde!!!! y vos?<br>
+(20:08:38) <strong>rollero:</strong> ah yo bien por aqui<br>
+(20:08:45) <strong>rollero:</strong> estaba leyendo lo de bithub<br>
+(20:08:56) <strong>rollero:</strong> mola, no sabia, tengo q leer mas<br>
+(20:09:07) <strong>rollero:</strong> yo abri un hilo hace mil sobre eso<br>
+(20:09:56) <strong>rollero:</strong> bueno, me imagino tambien una manera mas simple y cutre de atacar el asunto<br>
+(20:10:17) <strong>aleph:</strong> Molaría recopilar la info en el hilo para ver qué opciones...<br>
+(20:10:32) <strong>aleph:</strong> mañana, creo, dispondré de un server para intalar una demo... para cacharrear...<br>
+(20:10:51) <strong>rollero:</strong> con un formulario y checkboxes ya podria valer.. pero mextraña q no haber oido lo de bithub en faicoop o coopfunding<br>
+(20:11:13) <strong>rollero:</strong> vaya q bien<br>
+(20:11:48) <strong>rollero:</strong> voy a ver q dicen en el grupo de coopfunding<br>
+(20:16:19) <strong>rollero:</strong> ah, el tema de bithub crees q es mejor solo para software libre activista?<br>
+(20:17:32) <strong>aleph:</strong> Bueno, en verdad, siempre, pensando en máximos-utópicos, lo genial sería desarrollar nuestro propio gestor de micropagos... Bithub solamente es un servicio que conecta github con coinbase...<br>
+(20:17:53) <strong>aleph:</strong> molaría poder conectar repositorios de gitorious o redmine con carteras darkwallet... and so on...<br>
+(20:18:42) <strong>aleph:</strong> Y del plugin para backups de usuarios qué opinas? algunan idea de cómo abordarlo? <a href="https://n-1.cc/discussion/view/2095202/lorea-reloaded-spring-summer-autumn-2015-plugin-inhabitant-backups">https://n-1.cc/discussion/view/2095202/lorea-reloaded-spring-summer-autumn-2015-plugin-inhabitant-backups</a><br>
+(20:20:27) <strong>rollero:</strong> estaba pensando en eso del dw si, y creo q lo del funding iba para la 1.0 si. en un par de dias o tres digo algo por alli por el foro<br>
+(20:20:46) <strong>rollero:</strong> lo de la data<br>
+(20:21:01) <strong>rollero:</strong> claro q mola, pero no lo veo para desarrollar en elgg</p>
+
+<p>(20:29:49) <strong>aleph:</strong> como te oiga Efecto99 decir que el plugin este no hace falta te ata los testículos con hilo de púas y te los aprieta hasta que te efundan los líquidos primordiales... ;.D<br>
+(20:29:54) <strong>aleph:</strong> :-D<br>
+(20:30:26) <strong>rollero:</strong> :P<br>
+(20:31:00) <strong>rollero:</strong> para mi la prioridad de hacerlo en elgg es bajisima..<br>
+(20:31:04) <strong>rollero:</strong> para mi eh<br>
+(20:31:32) <strong>aleph:</strong> qué significa la abreviación que has puesto arriba: dw?<br>
+(20:31:50) <strong>rollero:</strong> es que encima el content added to the group belong to the group (owner)<br>
+(20:31:54) <strong>rollero:</strong> darkwallet<br>
+(20:32:25) <strong>aleph:</strong> :P<br>
+(20:32:26) <strong>rollero:</strong> bajarse lo publicado desde un user en su profile igual es facil, pero lo otro debe ser chungo de testiculos<br>
+(20:33:29) <strong>rollero:</strong> ei podriamos empezar por tener una direccion de bitcoin para lorea y otra para n-1, q tal?<br>
+(20:33:44) <strong>aleph:</strong> Bueno, si sale quorum para ese "Lorea Reloaded Spring-Summer-Autumn 2015 semipermanent hackathon" que propongo podemos listar tareas y poner esta en el grado de prioridad que el corresponda...<br>
+(20:33:45) <strong>rollero:</strong> bitcoin y etcrypto mas<br>
+(20:34:01) <strong>aleph:</strong> Creo que ya la tienen...<br>
+(20:34:21) <strong>rollero:</strong> ah voy a checkear<br>
+(20:34:27) <strong>aleph:</strong> me parece que figuran en la portada del grupo:<br>
+(20:35:04) <strong>aleph:</strong> <a href="https://n-1.cc/pg/groups/11605/sustainability/">https://n-1.cc/pg/groups/11605/sustainability/</a><br>
+(20:35:18) <strong>rollero:</strong> 1PsJRjeThvsJuRBxf3hnzQjH16MPA8cMmU<br>
+(20:35:59) <strong>rollero:</strong> hay q darle mas visibilidad<br>
+(20:36:13) <strong>rollero:</strong> tanto para eldonante como para el participante<br>
+(20:36:23) <strong>rollero:</strong> sabeis algo de la web lorea.org?<br>
+(20:37:33) <strong>rollero:</strong> podemos hacer una cuenta cryptocoin para n-1 pim-pam<br>
+(20:37:59) <strong>rollero:</strong> y lo ponemos en la web n-1.cc<br>
+(20:38:02) <strong>aleph:</strong> de la web parece que hay algún problema de certificados... <a href="https://n-1.cc/discussion/view/2080888/loreaorg-re-visited">https://n-1.cc/discussion/view/2080888/loreaorg-re-visited</a><br>
+(20:39:35) <strong>aleph:</strong> De esos que dice de la moneda, en el grupo "sustainability", Binge propone crear una moneda para n-1: <a href="https://n-1.cc/discussion/view/2087615/sostenibilidad-de-n-1-2015">https://n-1.cc/discussion/view/2087615/sostenibilidad-de-n-1-2015</a><br>
+(20:40:37) <strong>rollero:</strong> que cabeza pondria el contenido solo para usuarios logueados por defecto?<br>
+(20:40:51) <strong>rollero:</strong> no me puedo loguear ahora para verlo.. :)<br>
+(20:41:11) <strong>aleph:</strong> Vaya... eso sí que es fácil de cambiar en el panel de admin...<br>
+(20:41:15) <strong>rollero:</strong> en cuanto pueda lo cambio a publico por defecto en n-1<br>
+(20:41:27) <strong>aleph:</strong> ¿tú eres admin?<br>
+(20:41:35) <strong>rollero:</strong> pero tengo q pillar a un admin desprevenido ;)<br>
+(20:41:42) <strong>aleph:</strong> :-D<br>
+(20:41:49) <strong>rollero:</strong> yo no, ni operator<br>
+(20:42:04) <strong>rollero:</strong> mi unico privilegio es ser creador de tareas en el grupo n-1</p>
+
+<p> </p>
+
+<p>[English]---------</p>
+
+<p>As Blinge quote about current task list priorities, Aleph &amp; Blinge agree with to pull the plugin in the array over the calendar.</p>
+
+<p>Also, about first perspective above: <strong>1) APP like by caching content offline, </strong>...  here there is an ataching: «a nine-frames gif about <em>ng-browser</em> and <em>the evolution of serverMVC to APP paradigm»</em> just to hold in the wall a two minutes speech introduction. Gif's<em> frame duration</em> is intended to be remarked<em> a time-extension speech pulse</em> while dealing with the microphone.</p>
+
+<p> </p>
+
+<p><img alt="APPCache, Client-rendered, chrome-style updates, AMD managing dependencies, auth-as-a-service, package managers, task runers" src="https://lakurrealidad.files.wordpress.com/2015/03/animacion.gif"></p>
+
+<p> </p>
+
+<p>[Spanish]</p>
+
+<blockquote>
+<p>Veréis. Creo que hay que renovar las cuentas de paypal y de bitcoin del capítulo de donaciones de lorea. Ahora mismo está un poco desordenado el asunto.</p>
+
+<p>Cuando hayamos hecho eso estoy de acuerdo en volver a darle más visibilidad.</p>
+</blockquote>
+
+<p>Vale. Ya se abordará en su momento, entonces. He estado mirando sobre la primera opción: 1) APP like by caching content offline.</p>
+
+<p> </p>
+
+<p><img alt="image" src="https://eartesania.files.wordpress.com/2014/01/separador.png"><strong> </strong></p>
+
+<p><strong>CHAPTER FIVE:</strong></p>
+
+<p><strong>Magnetic'em all / Vale, poniéndonos el mono de faena!</strong></p>
+
+<p> </p>
+
+<p> </p>
+
+<p>[English]----------------</p>
+
+<p>Hi,</p>
+
+<p>I was wondering if could be nice to spread some flyers in the net just to make gardeners notice that they can join the semipermanent spring-summer-autumn 2015 Lorea hackaton; this album is to manage some flyers and advertising material.</p>
+
+<p> </p>
+
+<p>[Spanish]----------------</p>
+
+<p>Buenas,</p>
+
+<p>No sé si sería una buena idea salir en grupitos a<strong> diseminar la idea del hackaton semipermantente primavera-verano-otoño 2015</strong> y colgar por la red carteles en busca de coders voluntariosos que quieran adherirse. Quizás podríamos <strong>organizar algún seminario virtual para mostrar cómo es el proceso de instalación de una semilla</strong> enlanzando con la importancia de no usar herramientas del amo para desmontarle la casa.</p>
+
+<p>Recoger en este álbum bocetillos de carteles o materiales para<strong> buscar jardineros que se pregunten qué pueden hacer por Lorea</strong> una vez descubran qué puede hacer ella por ellos.</p>
+
+<p>A kind of starting-up overview</p>
+
+<p> </p>
+
+<p>[English]-------------</p>
+
+<p>This is a flyer draft just to advertise the semipermanent  hackaton.</p>
+
+<p> </p>
+
+<p>[Spanish]---------------</p>
+
+<p>Cartel publicitario: se buscan jardineros.</p>
+
+<p><img alt="" src="https://lakurrealidad.files.wordpress.com/2015/03/loreahackaton.png"></p>
+
+<p>[Lorea Reloaded Spring-Summer-Autumn 2015]</p>
+
+<p>Plugin "inhabitant backups"</p>
+
+<p>Elgg20,</p>
+
+<p>plugin, inhabitant backup</p>
+
+<p> </p>
+
+<p>[English]--------------</p>
+
+<p>See if it is gona be rocked this discussión... as the crows flies... whatever bats...</p>
+
+<blockquote>
+<p><a href="https://n-1.cc/discussion/view/2095202/lorea-reloaded-spring-summer-autumn-2015-plugin-inhabitant-backups">https://n-1.cc/discussion/view/2095202/lorea-reloaded-spring-summer-autumn-2015-plugin-inhabitant-backups</a></p>
+</blockquote>
+
+<p><img alt="" src="https://eartesania.files.wordpress.com/2015/03/above-newsted.png"></p>
+
+<p>Here some spam: <a href="https://www.youtube.com/watch?v=Yh0X-8iMjTk">https://www.youtube.com/watch?v=Yh0X-8iMjTk</a></p>
+
+<p>Here some recursive linking joke: <a href="https://github.com/aleph1888/darkinhabitant/issues/1">https://github.com/aleph1888/darkinhabitant/issues/1</a>, but as far as the thread has been moved, it has been desactivated.</p>
+
+<p> </p>
+
+<p>[Spanish]-------------</p>
+
+<p>A ver si los cuervos pasan un vuelo rasante con los murciélagos y se discute la piedra esa del hilo:</p>
+
+<blockquote>
+<p><a href="https://n-1.cc/discussion/view/2095202/lorea-reloaded-spring-summer-autumn-2015-plugin-inhabitant-backups">https://n-1.cc/discussion/view/2095202/lorea-reloaded-spring-summer-autumn-2015-plugin-inhabitant-backups</a></p>
+</blockquote>
+
+<p>Esto era un chiste recursivo naive naîf: <a href="https://github.com/aleph1888/darkinhabitant/issues/1">https://github.com/aleph1888/darkinhabitant/issues/1</a>, pero habiéndose movido el hilo, se ha desactivado.</p>
+
+<p>Now watching: Zìzêk's The pervert's guide to ideology film...</p>
+
+<p> </p>
+
+<p><img alt="image" src="https://eartesania.files.wordpress.com/2014/01/separador.png"><strong> </strong></p>
+
+<p><strong>CHAPTER SIX: </strong></p>
+
+<p><strong>Conclusions and derivations: SCRUMer way of life / Recapitulación y calendario.</strong></p>
+
+<p> </p>
+
+<p>[English]------------------</p>
+
+<table border="1">
+    <tbody>
+        <tr>
+            <td>
+            <p>1</p>
+            </td>
+            <td>
+<a href="https://eartesania.files.wordpress.com/2015/03/tdw02.png"><img alt="image" src="https://eartesania.files.wordpress.com/2015/03/tdw02.png"></a>
+            <p>AppCaching, in client rendered UI's, is good! HTML5 can manage offline scenarios...</p>
+            </td>
+            <td>
+            <p>2</p>
+            </td>
+            <td>
+<a href="https://eartesania.files.wordpress.com/2015/03/tdw05.png"><img alt="image" src="https://eartesania.files.wordpress.com/2015/03/tdw05.png"></a>
+            <p>It would be good to start a list: <em>what do I need to learn</em>?</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+            <p>3</p>
+            </td>
+            <td>
+<a href="https://eartesania.files.wordpress.com/2015/03/tdw06.png"><img alt="image" src="https://eartesania.files.wordpress.com/2015/03/tdw06.png"></a>
+            <p>Then, it should be nice <strong>to become self-explained</strong>...</p>
+            </td>
+            <td>
+            <p>4</p>
+            </td>
+            <td>
+<a href="https://eartesania.files.wordpress.com/2015/03/tdw08.png"><img alt="image" src="https://eartesania.files.wordpress.com/2015/03/tdw08.png"></a>
+            <p>... become self-explained so we are able to avoid off-the-record-voices. And so on...</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+            <p>6</p>
+            </td>
+            <td>
+<a href="https://eartesania.files.wordpress.com/2015/03/tdw09.png"><img alt="image" src="https://eartesania.files.wordpress.com/2015/03/tdw09.png"></a>
+            <p>A libido-sintetic poszizekian tutorial!</p>
+            </td>
+            <td>
+            <p>7</p>
+            </td>
+            <td>
+<a href="https://eartesania.files.wordpress.com/2015/03/tdw10.png"><img alt="image" src="https://eartesania.files.wordpress.com/2015/03/tdw10.png"></a>
+            <p>Ok. Clear enough: no more of the record voice.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+            <p>8</p>
+            </td>
+            <td><a href="https://eartesania.files.wordpress.com/2015/03/tdw12.png"><img alt="image" src="https://eartesania.files.wordpress.com/2015/03/tdw12.png"></a></td>
+            <td>
+            <p>9</p>
+            </td>
+            <td><a href="https://eartesania.files.wordpress.com/2015/03/tdw13.png"><img alt="image" src="https://eartesania.files.wordpress.com/2015/03/tdw13.png"></a></td>
+        </tr>
+        <tr>
+            <td>
+            <p>10</p>
+            </td>
+            <td><a href="https://eartesania.files.wordpress.com/2015/03/tdw14.png"><img alt="image" src="https://eartesania.files.wordpress.com/2015/03/tdw14.png"></a></td>
+            <td>
+            <p>11</p>
+            </td>
+            <td><a href="https://eartesania.files.wordpress.com/2015/03/tdw15.png"><img alt="image" src="https://eartesania.files.wordpress.com/2015/03/tdw15.png"></a></td>
+        </tr>
+        <tr>
+            <td>
+            <p>12</p>
+            </td>
+            <td><a href="https://eartesania.files.wordpress.com/2015/03/tdw16.png"><img alt="image" src="https://eartesania.files.wordpress.com/2015/03/tdw16.png"></a></td>
+            <td>
+            <p>13</p>
+            </td>
+            <td><a href="https://eartesania.files.wordpress.com/2015/03/tdw20.png"><img alt="image" src="https://eartesania.files.wordpress.com/2015/03/tdw20.png"></a></td>
+        </tr>
+    </tbody>
+</table>
+
+<p> </p>
+
+<p> </p>
+
+<p>[Spanish]--------------------</p>
+
+<table border="1">
+    <tbody>
+        <tr>
+            <td>
+            <p>1</p>
+            </td>
+            <td>
+<a href="https://eartesania.files.wordpress.com/2015/03/tdw00.png"><img alt="image" src="https://eartesania.files.wordpress.com/2015/03/tdw00.png"></a>
+            <p>Quizás unas coplas fueran mejor alimento para el viento cuando uno tienta su ponderación en la correlación de fuerzas colectiva...</p>
+            </td>
+            <td>
+            <p>2</p>
+            </td>
+            <td>
+<a href="https://eartesania.files.wordpress.com/2015/03/tdw07.png"><img alt="image" src="https://eartesania.files.wordpress.com/2015/03/tdw07.png"></a>
+            <p>... tantas cosas para hacer y tantos casos por vivir... ¿por qué hacer un tutorial post-zizekiano más?</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+            <p>3</p>
+            </td>
+            <td>
+<a href="https://eartesania.files.wordpress.com/2015/03/tdw19.png"><img alt="image" src="https://eartesania.files.wordpress.com/2015/03/tdw19.png"></a>
+            <p>Al final, esa sensación de progreso en el contador del identificador de la versión... ¡obras son amores!</p>
+            </td>
+            <td>
+            <p>4</p>
+            </td>
+            <td>
+<a href="https://eartesania.files.wordpress.com/2015/03/tdw01.png"><img alt="image" src="https://eartesania.files.wordpress.com/2015/03/tdw01.png"></a>
+            <p>... habla por un tiempo. Y permite, entonces, guardar silencio.</p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<p> </p>
+
+<p> </p>
+
+<p>[English]-----------------</p>
+
+<p>Concerning above brainstormed option:</p>
+
+<p><strong>1) APP like by caching content offline</strong></p>
+
+<p>... and on the context of: the hackathon called "Lorea Reloaded spring-summer-autumn 2015"... Some rocking girl gives advice to Aleph by saying:</p>
+
+<blockquote>
+<p>«... a naif coder would see the magic on his hands while trying to approach "inhabitant backup Elgg2dot0 plugin" in a way as you request; the naive coder can think that this plugin is posible by such fucking great controller unsystem people have built; take a look on repo:</p>
+
+<p><a href="https://github.com/darkwallet/darkwallet/blob/develop/src/js/frontend/controllers/backups.js">https://github.com/darkwallet/darkwallet/blob/develop/src/js/frontend/controllers/backups.js</a> »</p>
+</blockquote>
+
+<p>"Tell me, what?!!!" -- this is shouted by Aleph-- "This is crazy!!!! Ain't it!"</p>
+
+<p>Can you imagine an APP where this frontend could use this controller... let's say:</p>
+
+<blockquote>
+<p><a href="https://github.com/lorea/lorea_backup_holder/blob/develop/src/js/frontend/controllers/backups.js">https://github.com/lorea/lorea_backup_holder/blob/develop/src/js/frontend/controllers/backups.js</a> ?</p>
+</blockquote>
+
+<p> </p>
+
+<p>[Spanish]---------------------<br>
+En el contexto del <strong>hackathon semipermanente «Lorea Reloaded primavera-verano-invierno 2015» </strong>y del<strong> plugin para Elgg2.0 "copias de seguridad para habitantes"</strong>, un coder perdido en la inmensidad de la impotencia podría escuchar la voz de conseja que una rocking twitt star le da en rebote de su petición, apuntándole a encontrar la panacea en semejante<strong> controlador de backups dentro del frontend js de la darkwallet</strong> (que, por cierto, van por la 0.8.0):</p>
+
+<blockquote>
+<p><a href="https://github.com/darkwallet/darkwallet/blob/develop/src/js/frontend/controllers/backups.js">https://github.com/darkwallet/darkwallet/blob/develop/src/js/frontend/controllers/backups.js</a></p>
+</blockquote>
+
+<p>... y, viéndolo, junto con<strong> la clase de entrada a la API js</strong> --la rocking twitt star le señala--:</p>
+
+<blockquote>
+<p><a href="https://github.com/darkwallet/darkwallet/blob/develop/src/js/darkwallet.js">https://github.com/darkwallet/darkwallet/blob/develop/src/js/darkwallet.js</a></p>
+</blockquote>
+
+<p>"¡Sí se puede, sí se puede!"--exclama Aleph. Cree que puede crear ese plugin...-- "¡Sí se puede!"</p>
+
+<p>(¡¡¡Someone could help this fucking naive, naif coder. Little fnordian son of Eris!!!)</p>
+
+<p>¿Alguien más se imagina un:</p>
+
+<blockquote>
+<p><a href="https://github.com/lorea/lorea_backup_holder/blob/develop/src/js/lorea_bup_hold.js">https://github.com/lorea/lorea_backup_holder/blob/develop/src/js/lorea_bup_hold.js</a></p>
+</blockquote>
+
+<p>?</p>
+
+<p> </p>
+
+<p><img alt="image" src="https://eartesania.files.wordpress.com/2014/01/separador.png"><strong> </strong></p>
+
+<p><strong>CHAPTER SEVEN: </strong></p>
+
+<p><strong>References &amp; notes / Consejas y pautas.</strong></p>
+
+<p> </p>
+
+<p> </p>
+
+<p>[English]---------------</p>
+
+<p>Aleph brings here some mail reply to an specific demand about caching content in client-rendered and appcachebased auth-as-a-service browsers managing dependencies and packages and running tasks.</p>
+
+<p>The guy that is emailed by Aleph, answers by saying that it good to be nice window to use:<strong> 2012, de Archibald[<a href="http://alistapart.com/article/application-cache-is-a-douchebag">1</a>]: Application cache is a douchebag, article</strong>.</p>
+
+<p>He also makes some naif joke with current politiks star in Spain's panorama.</p>
+
+<p> </p>
+
+<p>[Spanish]------------------</p>
+
+<p>Uno de los juegos más gustosos que tiene Pablo Iglesias en sus tertulias, en un claro alarde de juego con el poder, ya sito en la tertulia en el papel de moderador omnisciente, es el de echarle el cabo a los tertulianos diciéndoles: «Si yo fuera el presidente de la nación y vosotros mis asesores en [tal o cual materia que se está debatiendo], en "regla del minuto", en sesenta segundos: ¿qué me aconsejaríais?»</p>
+
+<p>Pues bien, Aleph, yo aquí, siendo tú el moderador que aguarda mi punto de vista, mi visión-lógica del asunto, si tuviera que asesorarte en un minuto sobre cual es el estado de la cuestión APP en términos generales, tiraría de artículo de 2012, de Archibald[<a href="http://alistapart.com/article/application-cache-is-a-douchebag">1</a>]: Application cache is a douchebag.</p>
+
+<p>Por ahí que se puedan abordar otros temas a partir de esa ventana.</p>
+
+<p>Básicamente explica «el terreno sobre el que las APPs se asientan, arrojándose desde los servidores de html». Da un poco de contexto técnico, tres años atrás, de un proceso que ahora, en tu demanda, se hace vigente: «la necesidad de dotar a los dispositivos móviles de potencia de almacenamiento y autonomía. La explicación tecnológica de este proceso de emancipación de las app como móneras soberanas que se interconectan en ecosistema punto a punto» se hila en una serie de tecnologías y de tipologías de códigos que participan en el proceso. Sobre todo cuando ese, digamos descenso desde el platónico mundo de servidores LAMP, dota de sustancia a un fragmetario cuerpo de particulas flotando entre la WEB y la DEEP WEB.</p>
+
+<p>Si te veo en persona te lo comento en unos minutos. Vamos mirando. Corto y cambio. ¿Sigues con el blog de los mosqueteros y del Dartañan?</p>
+
+<p>[1] <a href="http://alistapart.com/article/application-cache-is-a-douchebag">http://alistapart.com/article/application-cache-is-a-douchebag</a></p>
+
+<p> </p>
+
+<p><img alt="image" src="https://eartesania.files.wordpress.com/2014/01/separador.png"><strong> </strong></p>
+
+<p><strong>CHAPTER EIGHT: </strong></p>
+
+<p><strong>The project: darkinhabitant, a lorea petal falls down / El projecto: habitante policromático: caen pétalos desde Lorea.</strong></p>
+
+<p> </p>
+
+<p>[Spanglish]-------------</p>
+
+<p><strong>Lorea semi-permanent 2015-Spring-Summer-Autumn hackathon</strong>:</p>
+
+<p>Spring: #week 01</p>
+
+<p>What we have already done in this sprint?</p>
+
+<blockquote>
+<p><a href="https://n-1.cc/profile/jacme">aleph</a> publicó una entrada en el blog <a href="https://n-1.cc/blog/view/2096108/tutorial-postzizekiano-darkinhabitant-a-javascript-ui">Tutorial postzîzêkiano: DarkInhabitant, a JavaScript UI</a> en el grupo <a href="https://n-1.cc/g/aprender-programaci%C3%B3n+javascript">JavaScript</a> hace una hora</p>
+</blockquote>
+
+<p>Abordaremos en diez o quince sesiones la construcción de una API Javascript que controle el skeleto de un habitante-oscuro.</p>
+
+<p>Spring: #week 02</p>
+
+<p><strong>Tutorial: lesson 001: becoming a Lorea-dev / Lección 001: Bifurcarse en Lorea-dev</strong></p>
+
+<p><a href="https://n-1.cc/blog/view/2096108/tutorial-postzizekiano-darkinhabitant-a-javascript-ui">Tutorial postzîzêkiano: DarkInhabitant, a JavaScript UI</a> en el grupo <a href="https://n-1.cc/g/aprender-programaci%C3%B3n+javascript">JavaScript</a>:</p>
+
+<blockquote>
+<p>Abordaremos en diez o quince sesiones la construcción de una API Javascript que controle el skeleto de un habitante-oscuro.</p>
+</blockquote>
+
+<p>Hello. Hola.</p>
+
+<p>Just wondering if you also would like to join this post-zîzêkian TIC tutorial. ¿En plan 0-days, me preguntaba cómo podría convertirme en un Lorea-Dev?</p>
+
+<p>The idea of becoming a Lorea Dev, while pulling on the tutorial drived me to:</p>
+
+<blockquote>
+<p><a href="https://github.com/lorea/lorea-dev">https://github.com/lorea/lorea-dev</a></p>
+</blockquote>
+
+<p>¿Qué diantre podría ser lorea/lorea-dev? Había que averiguarlo.</p>
+
+<p>Of course this repo it is not a paradigm of actuality and breaking news, (you can try,<em> try and try</em> as in Jimmy Cliff's song, because <em>you can get it if you really want</em>: some kind of pure vanguard darkinhabitant [1] just in case you feel disgusting with oldsheet repo above). Si te da grimilla que te ponga un enlace a un repositorio de hace cinco años, puedes echarle un vistazo a darkinhabitant [1] que es más novedoso y molón.</p>
+
+<p>Just in case, from 8 days ago, as starting this <strong>semipermanent-hackathon for Lorea's 2015 spring-summer-autumn</strong>, wether you came expecting not to get into "the zone" or wether you are expecting for that, here we are: ¡no sigan este tutorial más allá de esta línea quienes nos sepan nadar o lleven flotador o manguitos!</p>
+
+<p>What's Lorea-dev? Vamos a ver qué es <em>lorea-dev</em>. Y, what is more, vamos a ver qué podemos hacer nosotros por <em>lorea-dev</em>. Did you already fork it?</p>
+
+<p><img alt="Lorea semi-permanent 2015-Spring-Summer-Autumn hackathon: Tutorial: lesson 001: becoming a Lorea-dev" src="https://lakurrealidad.files.wordpress.com/2015/03/tut_becoming_a_lorea_dev_00.png"></p>
+
+<p>Referencias / links:</p>
+
+<p>[1] <a href="https://github.com/aleph1888/darkinhabitant/commit/788254433d5daba3ad5a2d050690eeb00bb786ad">https://github.com/aleph1888/darkinhabitant/commit/788254433d5daba3ad5a2d050690eeb00bb786ad</a></p>
+
+<p> </p>
+
+<p>[English]------------</p>
+
+<p>Hello writers and librarians!!!</p>
+
+<p>I want you: <a href="https://github.com/aleph1888/darkinhabitant/commit/0e6920c1d1f1d68ee8939f7d57a0635a5aa8fd4e">https://github.com/aleph1888/darkinhabitant/commit/0e6920c1d1f1d68ee8939f7d57a0635a5aa8fd4e</a></p>
+
+<p> </p>
+
+<p>[Spanish]-------------</p>
+
+<p>Hola, que propongo que el hackathon semipermanente LOREA primavera-verano-otoño 2015, pasando del subgrupo hackathons, por su condición de semipermanente, que la propuesta es de instalarnos en la wiki del grupo CODE. Aquí pongo enlace a la petición.</p>
+
+<p><a href="https://github.com/aleph1888/darkinhabitant/commit/0e6920c1d1f1d68ee8939f7d57a0635a5aa8fd4e">https://github.com/aleph1888/darkinhabitant/commit/0e6920c1d1f1d68ee8939f7d57a0635a5aa8fd4e</a></p>
+
+<p> </p>
+
+<p>[English]---------------</p>
+
+<p>Fanzine: <a href="https://eartesania.files.wordpress.com/2015/03/keep_calm_party_on_2dot01.png">https://eartesania.files.wordpress.com/2015/03/keep_calm_party_on_2dot01.png</a></p>
+
+<p>APPDemo: <a href="https://github.com/aleph1888/darkinhabitant/blob/master/manifest.json">https://github.com/aleph1888/darkinhabitant/blob/master/manifest.json</a></p>
+
+<p>Wouldn't be nice to make "darkinhabitant based "backup parties" while playing on some "keysinging party" by getting data on phone chat recording room?</p>
+
+<p>Check proto-plugin for Asterisk-PLN-Lorea's SIP voice platform [1]:</p>
+
+<blockquote>
+<p><a href="https://github.com/lorea/rtcheckcalls/pull/1">https://github.com/lorea/rtcheckcalls/pull/1</a></p>
+</blockquote>
+
+<p>[1] <a href="https://github.com/lorea/rtcheckcalls">https://github.com/lorea/rtcheckcalls</a></p>
+
+<p> </p>
+
+<p>
+</p>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/aleph1888">aleph1888</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
