@@ -1,5 +1,7 @@
 Check other events taking place on [Lorea Spring-summer-autumn semipermanent-hackathon 2015] in Lorea's group on n-1.cc, 'don't just use it, join us!' 
 
+![Don't be dicky with breaking news](https://lakurrealidad.files.wordpress.com/2014/09/informationis.png)
+
 Here and now, focusing on:
 
 Lorea - back ups APP
@@ -21,6 +23,8 @@ You can load the extension into Chrome by going to _Extensions_, enabling _Devel
 
 Alpha!!!
 -----------
+![Don't be pussy with gregorian calendar!](https://lakurrealidad.files.wordpress.com/2011/02/reloj-arena.gif)
+
 We're still in [alpha](http://en.wikipedia.org/wiki/Software_release_life_cycle#Alpha) state, that means we're still changing things a lot and it's not safe at all to use the wallet.
 More information at: https://n-1.cc/discussion/view/2095202/lorea-reloaded-spring-summer-autumn-2015-plugin-inhabitant-backups
 
