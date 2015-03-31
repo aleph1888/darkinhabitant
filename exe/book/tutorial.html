@@ -1,0 +1,418 @@
+<html>
+<body>
+<p>Fruto de la iniciativa del <a href="https://n-1.cc/blog/view/2095213/lorea-reloaded-spring-summer-autumn-2015">hackathon semi-permanente</a> [1], se inicia aqu&iacute; el tutorial postz&iuml;z&euml;kiano: habitante-oscuro: una interfaz de usuario en JavaScript.</p>
+
+<p>This tutorial is intended to cover the darkinhabitant skeleton JS UI on ten or fifteen sessions. So let&#39;s go through over. Good be nice to keep in touch!!</p>
+
+<p><u>Referencias </u>/ <u>links</u>:</p>
+
+<p>[1] https://n-1.cc/discussion/view/2096019/%C2%BFte-apuntas-a-una-hackathon-con-codigo</p>
+
+<p><img alt="Lorea - postzîuzêkian tutorial on JS skeleton UI" src="https://eartesania.files.wordpress.com/2015/03/lorea.png" style="height:201px; width:500px" /></p>
+
+<p>[English]------------------------</p>
+
+<p>Greetings,</p>
+
+<p>This is to write down <em>Lorea&#39;s inhabitant&#39;s backup</em> plugin specifications.</p>
+
+<p>By initializing:</p>
+
+<p>1) The plugin should manage private and public documents acording to user privileges. Maybe, user&#39;s profile can be used to get an index with current elements. Meaning: user authored documents and related by privileges other&#39;s documents.</p>
+
+<p>2) The plugin shoud offer some U.I. to check or uncheck desidered backup elements.</p>
+
+<p>3) All elements of the network should be available for backup.</p>
+
+<p>4) Particular points to be studied: (order from less to maximum complexity):</p>
+
+<p>-- a) Telegrams -- b) Links -- c) Photos -- d) V&iacute;deos -- e) Tasks -- f) Pages -- g) Calendar -- h) Blogs -- i) Wikis -- j) Groups -- --&nbsp; j.0) Elements above. -- --&nbsp; j.1) Discussions, assamblies module. -- --&nbsp; j.2) Mail lists</p>
+
+<p>See suggested approaching methods below...</p>
+
+<p>[Spanish]----------------------</p>
+
+<p>Saludos,</p>
+
+<p>Quisiera proponer un hackaton para el tema del plugin para <em>copias de respaldo de los habitantes</em> de Lorea.</p>
+
+<p>S&eacute; que no hay nadie ah&iacute; escuchando, pero supongo que los pasos correctos pasan por abrir este hilo.</p>
+
+<p>Igualmente, tambi&eacute;n, supongo, que en cuanto plantee la curva de aprendizaje de Lorea me vendr&eacute; abajo porque ver&eacute; que la imbrincaci&oacute;n con los f&oacute;siles y cad&aacute;veres que se han amontonado pesa sobremanera. Igualmente, ahora hay energ&iacute;as.</p>
+
+<p>Una primera aproximaci&oacute;n:</p>
+
+<p>Tomo como punto de partida el planteamiento que Blinge anot&oacute;:</p>
+
+<blockquote>
+<p>Supongo que un backup de usuarias tendr&iacute;a que distinguir entre los documentos publicos y los escritos en privado.. una forma de seleccionar la informaci&oacute;n no necesaria y descartarla del backup... &iquest;Se hace backup de los post de las listas de discusi&oacute;n o de las p&aacute;ginas publicadas en un grupo y no de de los telegramas? &iquest;Se realiza una busqueda en la base de datos de todo lo relacionado con tal o cual usuario, se copia y comprime todo en un archivo y se env&iacute;a por email?</p>
+
+<p>Al estar cada usuaria metida en varios grupos y cruzando conversaciones hacer un backup de todo me resulta primero complejo de imaginar de forma ordenada.</p>
+
+<p>&iquest;Y podr&iacute;as entonces descargar todos los contenidos de otras usuarias si supieras sus contrase&ntilde;as?</p>
+
+<p>&iquest;Y como ser&iacute;a visualizar el contenido descargado? &iquest;habr&iacute;a que volverlo a instalar en otro elgg para poder verlo ordenadamente o bastar&iacute;a con la terminal para el que sepa usarla?</p>
+
+<p>O le dedico tiempo a hacer estas reflexiones o a leer sobre como la gente debe limpiarse el culo. No se por donde seguir inspir&aacute;ndome.</p>
+
+<p>&iquest;Como puedo expresar gratitud por lo que has escrito siempre? Pero las que te hayan leido antes atentamente ya conoc&iacute;an la relaci&oacute;n de acontecimientos que has percibido al haberlo explicado otras veces. &iquest;Para cuando un debate t&eacute;cnico y en ingl&eacute;s sobre problemas concretos? Podemos dinamizar eso mientras cada una se limpia el culo como pueda. O hacer nosotras lo mismo y liarnos a dedicarle a la misma cosa el tiempo que le prestamos atenci&oacute;n al grupo lorea de n-1.</p>
+</blockquote>
+
+<p>Entonces, por sistematizar:</p>
+
+<p>1) El plugin debe distinguir entre documentos p&uacute;blicos y privados y gestionar la descarga acorde con el habitante que la solicita y sus privilegios.</p>
+
+<p>2) Ofrecer una interfaz de usuario para a&ntilde;adir/quitar los documentos que ser&aacute;n incluidos.</p>
+
+<p>3) Los documentos exportables habr&aacute;n de cubrir todos los m&oacute;dulos de datos de Lorea, desde telegramas hasta las p&aacute;ginas de las wikis, pasando por enlaces, fotos, p&aacute;ginas, etc.</p>
+
+<p>4) Casos concretos a estudiar (ordenados de menor a mayor complejidad):</p>
+
+<p>-- a) Telegramas -- b) Enlaces -- c) Fotos -- d) V&iacute;deos -- e) Tareas -- f) P&aacute;ginas -- g) Calendario -- h) Blogs -- i) Wikis -- j) Grupos -- --&nbsp; j.0) Elementos anteriores -- --&nbsp; j.1) Discusiones, m&oacute;dulo asambleas. -- --&nbsp; j.2) Lista de correos</p>
+
+<p>&nbsp;</p>
+
+<p><img alt="Rose" src="https://eartesania.files.wordpress.com/2014/01/rosasyagua.gif" /></p>
+
+<p>LOREA&#39;s BACKUP HOLDER - elgg2.0 inhabitant backup plugin - TUTORIAL</p>
+
+<p>&nbsp;</p>
+
+<p><u><strong>NOTA: EL TUTORIAL SE HAR&Aacute; EN INGL&Eacute;S. SOLICITA LA VERSI&Oacute;N EN CASTELLANO O CATAL&Aacute;N O GALLEGO O EUSKERA O ESPERANTO.</strong></u></p>
+
+<p>&nbsp;</p>
+
+<p><strong>&Iacute;ndice</strong>:</p>
+
+<ol>
+	<li><u>Step 1</u>:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;Having a code overview&quot;</li>
+	<li><u>Step 2</u>:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;Having a tech overview&quot;</li>
+	<li><u>Step 2.1</u>:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;Going deeper on tech overview&quot;</li>
+	<li>
+	<p><u>Step 3</u>:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;Manifesto&quot;</p>
+	</li>
+	<li>
+	<p><u>Step 3.1</u>:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;Internationalization&quot;</p>
+	</li>
+	<li>
+	<p><u>Step 4</u>:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;index.html&quot;</p>
+	</li>
+	<li>
+	<p><u>Step 5</u>:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>&quot;The IDE Start-up is over: cronotoping on the repo.&quot;</strong></p>
+	</li>
+</ol>
+
+<p>&nbsp;</p>
+
+<p><img alt="image" src="https://eartesania.files.wordpress.com/2014/01/separador.png" style="width:300px" /></p>
+
+<p><u>Step 1</u><strong>: &quot;Having a code overview&quot;</strong></p>
+
+<p>As Internet is heavily plenty full of information (it&#39;s like a fulfilled utopia to point out that something like this-huge-available-data-on-the-cloud would be desidered for those guys on the 70&#39;s phone phreaking times, like Captain Crunch and so on), as for it, this tutorial is intended to be like a knot matrix more than a big data concentration.</p>
+
+<p>To tech the situation, one would mention the <a href="http://www.bbc.co.uk/news/world-asia-india-24815476">Gandhi&#39;s spinning wheel</a> and, together, parallel lines, lacanian knot; just as a way of making theory in a way like &laquo;<em>a kind of joinning together the polygon edges, rather than keeping on building isolated pyramids for world hegemons demonstrations</em>&raquo;. That&#39;s not precisely a na&icirc;f feature. Quite simple, what I have on mind while writting this is: a descentraliced and <a href="https://bitmask.net/es">bitmasked</a> teching paradigma, so the Darkinhabitant APP keeps secure and criptographically protected from the colonizator spying <a href="http://prism-break.org/">Prism that must be broken</a>, and, that can bring his or her data to every Lorea-Elgg2.0 inhabitant by backing up in a safety way.</p>
+
+<p>So we are here posz&icirc;z&ecirc;kaning, there will be nothing to add, rather than bringing <a href="http://nosubject.com/index.php?title=Borromean_knot">Borromean knot</a> to your attention, while joining together <em>the imaginary-the simbolic-the real</em>, something that would bring to us <u><em>model-view-controller</em></u> paradigm as easy and rutinary on code desktop as a broom or a mop should be.</p>
+
+<p>Directly straight from <a href="https://github.com/darkwallet/darkwallet/blob/develop/HACKING.md">DW repo</a>, take a look to this code jerarchy design:</p>
+
+<blockquote>
+<p>src/js/ Code Root:</p>
+
+<p><br />
+├── <strong>BACKEND: </strong>Background page specific code (runs on the background)<br />
+│ ├── <strong>channels </strong>Communication channels and transport<br />
+│ └── <strong>services </strong>Backend services<br />
+│<br />
+├── <strong>FRONTEND: </strong>User facing code (runs on the tabs, tied to html, uses angular)<br />
+│ ├── <strong>controllers </strong>Angular controllers<br />
+│ ├── <strong>directives </strong>Angular directives<br />
+│ ├── <strong>filters </strong>Angular filters<br />
+│ ├── <strong>popup </strong>Code for the popup area on the topbar<br />
+│ └── <strong>scripts </strong>Content scripts<br />
+│<br />
+├──<strong> MODEL: </strong>Storage related core, and generic model functionality.<br />
+└── <strong>util </strong>Generic utils<br />
+└── <strong>ng </strong>Angular utils</p>
+</blockquote>
+
+<p>Check for<a href="https://github.com/aleph1888/darkinhabitant/blob/master/HACKING.md#debugging"> further structure hacking</a> on repo info file.</p>
+
+<p>Ok, So it will be on this terms that we will build our skeleton. As the crows flies, in Newsted words: &laquo;Don&#39;t stop dreamming until the last breath. Until it becomes real.&raquo;</p>
+
+<p><img alt="image" src="https://eartesania.files.wordpress.com/2014/01/separador.png" style="width:300px" /></p>
+
+<p><u>Step 2</u>: <strong>&quot;Having a tech overview&quot;</strong></p>
+
+<p>In this step of the post-z&icirc;z&ecirc;kian tutorial, we can attach here this famous: &quot;<em>From Platoo to NATO</em>&quot; without further explanations but having drawn a precisely timeline where we can stay ahead, as also, back to the JS skeleton UI, by listing this tech we will use:</p>
+
+<ul>
+	<li><a href="http://requirejs.org/">RequireJS</a> (module loader):</li>
+</ul>
+
+<blockquote>
+<p>RequireJS is <strong>a JavaScript file and module loader</strong>. It is optimized for in-browser use, but it can be used in other JavaScript environments, like Rhino and <a href="http://requirejs.org/docs/node.html">Node</a>. Using a modular script loader like RequireJS will improve the speed and quality of your code.</p>
+</blockquote>
+
+<ul>
+	<li><a href="http://gruntjs.com/">Grunt</a> (task runner):</li>
+</ul>
+
+<blockquote>
+<p>In one word: <strong>automation</strong>. The less work you have to do when performing repetitive tasks like minification, compilation, unit testing, linting, etc, the easier your job becomes.</p>
+</blockquote>
+
+<ul>
+	<li><a href="http://bower.io/">Bower</a> (package manager):</li>
+</ul>
+
+<blockquote>
+<p>Web sites are made of lots of things &mdash; frameworks, libraries, assets, utilities, and rainbows. Bower manages all these things for you.</p>
+
+<p><strong>Bower works by fetching and installing packages from all over</strong>, taking care of hunting, finding, downloading, and saving the stuff you&rsquo;re looking for. Bower keeps track of these packages in a manifest file, <a href="http://bower.io/docs/creating-packages/#bowerjson">bower.json</a>. How you use packages is up to you. Bower provides hooks to facilitate using packages in your <a href="http://bower.io/docs/tools">tools and workflows</a>.</p>
+
+<p>Bower is optimized for the front-end. Bower uses a flat dependency tree, requiring only one version for each package, reducing page load to a minimum.</p>
+</blockquote>
+
+<p>Check <a href="https://github.com/aleph1888/darkinhabitant/blob/master/HACKING.md#addingupgrading-dependencies-with-bower">how can you hack with bower</a> on repo info file.</p>
+
+<ul>
+	<li><a href="https://angularjs.org/">AngularJS</a> (HTML extension language):</li>
+</ul>
+
+<blockquote>
+<p>HTML is great for declaring static documents, but it falters when we try to use it for declaring dynamic views in web-applications<strong>. AngularJS lets you extend HTML vocabulary for your application</strong>. The resulting environment is extraordinarily expressive, readable, and quick to develop.</p>
+</blockquote>
+
+<ul>
+	<li><a href="https://nodejs.org/">NodeJS</a> (platform):</li>
+</ul>
+
+<blockquote>
+<p>Node.js&reg; is a platform built on <a href="http://code.google.com/p/v8/">Chrome&#39;s JavaScript runtime</a> for easily building fast, scalable network applications. Node.js uses an event-driven, non-blocking I/O model that makes it lightweight and efficient, perfect for data-intensive real-time applications that run across distributed devices.</p>
+</blockquote>
+
+<p>Check for <a href="https://hacks.mozilla.org/category/node-js/">how to hack NodeJs on Firefox</a> on Mozilla&#39;s site.</p>
+
+<ul>
+	<li><a href="https://github.com/beautify-web/js-beautify">js-beautify</a> (reformartor, reindentor, deobfuscator):</li>
+</ul>
+
+<blockquote>
+<p><strong>This little beautifier will reformat and reindent bookmarklets</strong>, ugly JavaScript, unpack scripts packed by Dean Edward&rsquo;s popular packer, as well as deobfuscate scripts processed by <a href="http://javascriptobfuscator.com/">javascriptobfuscator.com</a>.</p>
+</blockquote>
+
+<ul>
+	<li><a href="http://sass-lang.com/">SASS</a> (CSS extension language):</li>
+</ul>
+
+<blockquote>
+<p><strong>CSS with superpowers</strong>. Sass is the most mature, stable, and powerful professional grade CSS extension language in the&nbsp;world.&nbsp;Sass is completely compatible with all versions of CSS. We take this compatibility seriously, so that you can seamlessly use any available CSS libraries. Sass boasts more features and abilities than any other CSS extension language out there.</p>
+</blockquote>
+
+<p>Check <a href="https://github.com/aleph1888/darkinhabitant/blob/master/HACKING.md#css-hacking">how can you hack on CSS</a> on repo info file.</p>
+
+<p>&nbsp;</p>
+
+<p><u>Step 2.1</u>: <strong>&quot;Going deeper on tech overview&quot;</strong></p>
+
+<p>Have you heard about Z&icirc;z&ecirc;k telling the audience that old joke about a man that goes to a bar and ask for a coffee without cream, and then, the waiter replies: &laquo;Sorry, we&#39;ve run out of cream, may I offer you a coffee without milk?&raquo;. That is, a bit, the point of going deeper on tech overview, one could say that it is the same thing a coffee-without-cream than a coffee-without-milk, but, indeed, they are not. Aren&#39;t they? Some na&iuml;ve coder as me would piss out with this incognita. Netherless, however, I reckon as Goethe wrote and Nietzsche putted on black above white on the prologue of<em> The Use and Abuse of History</em> book: &laquo;I hate everything that merely instructs me without increasing or directly quickening my activity&raquo;:</p>
+
+<p>Ok, directly straight from <a href="https://github.com/darkwallet/darkwallet/blob/develop/bower.json">DW repo</a>, take a look to this dependencies list managed by Bower, used in 0.8.0 version:</p>
+
+<blockquote>
+<p>&nbsp;&quot;dependencies&quot;: {<br />
+&nbsp;&nbsp;&nbsp; &quot;font-awesome&quot;: &quot;~4.0.3&quot;,<br />
+&nbsp;&nbsp;&nbsp; &quot;mnemonic.js&quot;: &quot;~1.0.0&quot;,<br />
+&nbsp;&nbsp;&nbsp; &quot;sjcl&quot;: &quot;~1.0.0&quot;,<br />
+&nbsp;&nbsp;&nbsp; &quot;lorea_gateway&quot;: &quot;git://github.com/lorea/lorea-gateway&quot;,<br />
+&nbsp;&nbsp;&nbsp; &quot;bitcoinjs-lib&quot;: &quot;git://github.com/bitcoinjs/bitcoinjs-lib#master&quot;,<br />
+&nbsp;&nbsp;&nbsp; &quot;angular&quot;: &quot;~1.2.13&quot;,<br />
+&nbsp;&nbsp;&nbsp; &quot;ngprogress&quot;: &quot;~1.0.4&quot;,<br />
+&nbsp;&nbsp;&nbsp; &quot;AngularJS-Toaster&quot;: &quot;~0.4.3&quot;,<br />
+&nbsp;&nbsp;&nbsp; &quot;angular-route&quot;: &quot;~1.2.14&quot;,<br />
+&nbsp;&nbsp;&nbsp; &quot;foundation&quot;: &quot;~5.3&quot;,<br />
+&nbsp;&nbsp;&nbsp; &quot;angular-foundation&quot;: &quot;~0.3.1&quot;,<br />
+&nbsp;&nbsp;&nbsp; &quot;requirejs&quot;: &quot;~2.1.11&quot;,<br />
+&nbsp;&nbsp;&nbsp; &quot;requirejs-domready&quot;: &quot;~2.0.1&quot;,<br />
+&nbsp;&nbsp;&nbsp; &quot;jsqrcode&quot;: &quot;<a href="https://github.com/LazarSoft/jsqrcode.git#master%22">https://github.com/LazarSoft/jsqrcode.git#master&quot;</a>,<br />
+&nbsp;&nbsp;&nbsp; &quot;qrcodejs&quot;: &quot;<a href="https://github.com/davidshimjs/qrcodejs.git%22">https://github.com/davidshimjs/qrcodejs.git&quot;</a>,<br />
+&nbsp;&nbsp;&nbsp; &quot;identicon&quot;: &quot;<a href="https://github.com/stewartlord/identicon.js.git%22">https://github.com/stewartlord/identicon.js.git&quot;</a>,<br />
+&nbsp;&nbsp;&nbsp; &quot;angular-xeditable&quot;: &quot;~0.1.8&quot;,<br />
+&nbsp;&nbsp;&nbsp; &quot;async&quot;: &quot;~0.7.0&quot;,<br />
+&nbsp;&nbsp;&nbsp; &quot;angular-moment&quot;: &quot;~0.7.0&quot;,<br />
+&nbsp;&nbsp;&nbsp; &quot;big.js&quot;: &quot;~2.5.0&quot;,<br />
+&nbsp;&nbsp;&nbsp; &quot;angular-translate&quot;: &quot;~2.2.0&quot;,<br />
+&nbsp;&nbsp;&nbsp; &quot;angular-translate-loader-static-files&quot;: &quot;~2.2.0&quot;<br />
+&nbsp; }</p>
+</blockquote>
+
+<p>Please, take note on this subversion of DW gateway on: <em>&quot;lorea_gateway&quot;: &quot;git://github.com/lorea/lorea-gateway&quot;</em>, while thinking on our Darkinhabitant being a toy that can <a href="http://github.com/aleph1888/torsocks">go through a tor-socks</a> or similar into darkness.</p>
+
+<p>I cannot imagine any mason going to work without a good toolbox and, neither, I can&#39;t imagine a mason spreading the word that he is a mason. Take a look also in <a href="https://github.com/darkwallet/darkwallet/blob/develop/package.json">package.json to devDependencies list</a>. We are not using this list above exactly, but it is good to know that we could take it, isn&#39;t it?</p>
+
+<p>So, here, joking as Z&icirc;z&ecirc;k on coffee-without-milk stupidity, we would like to know if a plugin that makes <a href="http://2014.kaosenlared.net/component/k2/84030-todos-los-programas-de-espionaje-de-la-nsa-desvelados-por-snowden.html">a backup without NSA-vigilance-detection</a> is the same as a plugin that makes <a href="https://www.meneame.net/m/tecnolog%C3%ADa/china-probablemente-ataca-github-introduciendo-troyano-baidu">a backup without Chinese-Big-Firewall-detection</a>, and, even, if they are the same as <a href="http://2014.kaosenlared.net/component/k2/101000-detrás-del-big-data">a backup without Big-Data-Merchants-interception</a>.</p>
+
+<p>Next, &iexcl;manifesto!</p>
+
+<p><br />
+<img alt="dia da liberdade" src="https://eartesania.files.wordpress.com/2015/03/flowe-cannon.png" style="height:360px; width:480px" /></p>
+
+<p>&iexcl;Claveles!</p>
+
+<p>&nbsp;</p>
+
+<p><img alt="image" src="https://eartesania.files.wordpress.com/2014/01/separador.png" style="width:300px" /></p>
+
+<p><u>Step 3</u>: <strong>&quot;Manifesto&quot;</strong></p>
+
+<p>Just going into coding now. I&#39;ve created three examples so we can talk about it. You know, <a href="http://semanticweb.org/wiki/Ontology">semantic web needs ontologies </a>over structures. <a href="http://hermetic.com/bey/">So does anarchism, Hakim Bey would say</a>, O.A.!</p>
+
+<p><img alt="Hakim Bey and Ontological Anarchy" src="http://hermetic.com/bey/bey-site.gif" style="height:236px; width:238px" /></p>
+
+<p>Forever and ever, <a href="http://www.washingtonpost.com/blogs/the-switch/wp/2015/01/28/bill-gates-on-dangers-of-artificial-intelligence-dont-understand-why-some-people-are-not-concerned/">the devil itself is calling for human agreement over artificial intelligence and bots</a>!, this could be a very bad thing for humans to do: making the <a href="http://en.wikipedia.org/wiki/Jacques_Lacan#Other.2Fother">lacanian Big Other</a> A/a a &quot;tech-potens agent&quot; able to learn by itself.</p>
+
+<p>Here, one would be pretty sure that <a href="http://en.wikipedia.org/wiki/Boomeritis">we are not boomeritis sick people</a>, and that we are posz&icirc;z&ecirc;kians, meaning that we are not going to develop the terms, but going through the burrow. Just simple as <a href="http://www.youtube.com/watch?v=2oRsw1wuhaA">orgasmatron</a>&#39;s beyond (Sepultura&#39;s song here) standing point, here and now, hic et nunc, we can propose that a machine will never have a<a href="http://www.traficantes.net/actividad/cono-potens-manual-sobre-su-poder-su-prostata-y-sus-fluidos%E2%80%9D-de-diana-j-torres"> co&ntilde;o-potens</a> (pornterrorism speaking here), will it?</p>
+
+<p>Ok, so here there are the three examples:</p>
+
+<ul>
+	<li><a href="https://github.com/aleph1888/darkinhabitant/blob/master/manifest.json">Manifesto.json</a> (for robots):</li>
+</ul>
+
+<blockquote>
+<p>&quot;name&quot;: &quot;Lorea 2.0 Backup Holder&quot;,<br />
+&quot;description&quot;: &quot;Your Lorea&#39;s back ups.&quot;,<br />
+&quot;homepage_url&quot;: &quot;https://n-1.cc/discussion/view/2095202/lorea-reloaded-spring-summer-autumn-2015-plugin-inhabitant-backups&quot;,<br />
+&quot;manifest_version&quot;: 0,<br />
+&quot;icons&quot;: {&quot;128&quot;: &quot;src/images/icon_128.png&quot;}</p>
+</blockquote>
+
+<ul>
+	<li><a href="https://github.com/aleph1888/darkinhabitant/blob/master/README.md">Readme</a> (for people):</li>
+</ul>
+
+<blockquote>
+<p>We love flowers, and, also, we love petals falling down from above the haulm.</p>
+
+<p>It could be nice you start a seed. But, with this backs up APP, it could be nice you keep some petals of your Lorea.</p>
+</blockquote>
+
+<ul>
+	<li><a href="https://github.com/aleph1888/darkinhabitant/blob/master/manifest.ontology">Manifesto.ontology </a>(for darkinhabitants):</li>
+</ul>
+
+<blockquote>
+<p>&laquo;... while building fluid and responsive APPcache based client-rendered UI&#39;s through JavaScript API; and while managing packages by RequireJS; and &quot;auth-as-a-service&quot; federating with oAuth or OpenID; we will use AngularJS to connect front and backend, by controlling some modules that binds data models between user interfaces and content deploying servers.&raquo; Ok, in short: &laquo;We are going to play around APP&#39;s, or some browser extensions, or some downloadable media pill... to be mobile-device consumed. Doing it in a Elgg2.0-lorea based taste!&raquo;</p>
+</blockquote>
+
+<p>Then, emerging from ex-nihilo, emerging from the void of our artwork and creation process, any robot, any people or any darkinhabitant can get a door to come into our reign. On Newsted heavy metal words: &laquo;... underdogs rise, from the flames&raquo;; while on Arch Enemy&#39;s words it could be:&nbsp; &laquo;Watch me closely, I will stand up - now&raquo;. Just talking on philosophical zombies:</p>
+
+<p><img alt="https://eartesania.files.wordpress.com/2015/01/philosophical-zombie.png" src="https://eartesania.files.wordpress.com/2015/01/philosophical-zombie.png" style="height:128px; width:290px" /></p>
+
+<p>&nbsp;</p>
+
+<p><u>Step 3.1</u>: <strong>&quot;Internationalization&quot;</strong></p>
+
+<p>One would be na&icirc;f and would be blindly a silly coder while ignoring <a href="http://www.hispantv.com/showepisode/.../Fort-Apache...torturas-de-la-CIA/78">real terms as torture</a>, or <a href="https://duckduckgo.com/?q=El+truco+de+las+pol%C3%ADticas+de+la+UE+de+convertir+deuda+privada+en+deuda+p%C3%BAblica.+crisis+econ%C3%B3mica+&amp;ia=videos">simbolic terms as debt</a>, or <a href="http://youtu.be/dlmYHbg5i_w">imaginary terms as surveillance </a>(We&hearts;Surveillance), and so on.</p>
+
+<p>Netherless, as it is sang on Clapton&#39;s <em>Tears from heaven</em>, one always must: &laquo;... be strong and carry on, cause I know I don&#39;t belong. Here in heaven&raquo;. I am standing on such a confirmation on being myself a fallen <em>non serviam</em> angel rather than a titan or a prince bringing the god&#39;s light to the world.</p>
+
+<p>Posz&icirc;zekanially, we can <a href="http://zizekstudies.org/index.php/ijzs/article/viewFile/160/266">talk on violence</a> towards a violent absolute theology, while asking ourselves <a href="http://www.sasazivkovic.org/?/Bias/revolutionarytoday/">what should be a revolutionary today</a>, rather than keeping calm and staying strong on a na&icirc;ve <a href="http://global.britannica.com/EBchecked/topic/525247/satyagraha">non-violent satyagraha</a> state of mind against WASP colonizator.&nbsp; And, of course, against other existing colonizators.</p>
+
+<p>A<a href="http://en.wikipedia.org/wiki/Linguistic_map"> Babel Tower Forum</a> to join in council (<a href="http://www.darklyrics.com/lyrics/archenemy/doomsdaymachine.html#3">Nemesis here</a>) will always be a chance to people, as it is painted on <a href="http://www.academia.edu/336056/ANTONIO_NEGRI_S_ONTOLOGY_OF_EMPIRE_AND_MULTITUDE">Negri&#39;s ontology on empire and multitude</a>; even if we fight each other like drunk people <a href="http://www.lacan.com/zizrobes.htm">on divine violence of terror.</a></p>
+
+<p>From whatever, another entry point should be a language selector so APP users can choose their mother-tongue. Take a look to this commit example. Here we bring, directly from <a href="https://github.com/darkwallet/darkwallet/tree/develop/src/i18n">DW Repo i18n</a>:</p>
+
+<blockquote>
+<p>[<a href="https://github.com/aleph1888/darkinhabitant/commit/5dd72600ea3f4b0a65fced99c200311cc440be81">develop 5dd7260</a>] Hello translators! This is main internalization structure.</p>
+</blockquote>
+
+<p>We<a href="https://wiki.unsystem.net/en/index.php/Darkwallet/Translations"> work together with Transifex</a> files, where we hold its<strong> key-translation array</strong>, see initial commit on this tutorial repo. For official <strong>getting started overview</strong> check <a href="http://docs.transifex.com/developer/client/init">guide on tx web site</a>. Check also <a href="https://github.com/aleph1888/darkinhabitant/blob/master/HACKING.md#developers">hacking indications</a>.</p>
+
+<p>So, as a conclusion, if we do really na&icirc;ves and really na&iuml;fs would need<strong> </strong>to point out the origins of a violent-imperialist-way-of-living just to stay <a href="https://duckduckgo.com/?q=la+realidad+chiapas">peacefully </a>or <a href="https://duckduckgo.com/?q=blockupy">blockupiedly</a> in front of it, now a days, all around the world, I&#39;m pretty sure we should take a branch from this tree, aren&#39;t we?:</p>
+
+<p>&nbsp;</p>
+
+<p><img alt="indo-european-language-tree" src="https://lakurrealidad.files.wordpress.com/2015/03/indo-european-language-tree.png" style="width:500px" /></p>
+
+<p><img alt="image" src="https://eartesania.files.wordpress.com/2014/01/separador.png" style="width:300px" /></p>
+
+<p><u>Step 4</u>: <strong>&quot;index.html&quot;</strong></p>
+
+<p>Just another irrelevant and na&icirc;ve day in my life took place on the 15th of November, 2007. I will explain later on. Could not seem relevant for this tutorial, but for sure it is.</p>
+
+<p>It is very common in application development that <strong>main entry point to a rendered UI is named as <em>index</em></strong>. It would be <em>index.html</em> in our HTML context.</p>
+
+<p>So I&#39;ve uploaded, directly from <a href="https://github.com/darkwallet/darkwallet/tree/develop/src/html/index.html">DW repo</a>, a template where all the magic begins. Take a look:</p>
+
+<blockquote>
+<p>[<a href="https://github.com/aleph1888/darkinhabitant/blob/develop/src/html/index.html">develop 9c1e1fd</a>] Hello runtime environments! So this is main rendering entry point.</p>
+</blockquote>
+
+<p>We should take on consideration some critical blocks on this file. But let me first tell you about this irrelevant and na&icirc;f day on 15th November. In short: I just get trapped under <a href="http://energycontrol.org/foro/Foro-sobre-drogas-y-gesti%C3%B3n-de-placeres-y-riesgos/4915-Realidad-y-Sustancia-con-Escohotado.html">the ice of a cold and rationalist speech from spanish-liberal-philosopher, Antonio Escohotado</a>. Do you know what I mean?</p>
+
+<p>The story goes by me taking some acids to Energy Control building on Madrid, in order to make some analytics over them. I was not aware about the book he was introducing to an uncertain audience (who dammit would care about &quot;reality and substance&quot; amoung those guys there?!!), neither, I was not aware of the speech. The event was organized by a self-called <em>Asociaci&oacute;n Eleusis</em>; last month, to go beyond, I found some <em>Encuentros Eleusinos</em> going on, again about a <a href="http://www.encuentroseleusinos.com/work/el-mapa-del-alma-y-el-mapa-del-mundo-con-antonio-escohotado/">Soul map &amp; reality map</a>, where the liberal-philosopher still tries to disturb the people whith his stupidities about, let&#39;s put in words: &laquo;a case that a gun cannon is threating you to be erased every bit of your personal memory&raquo;.&nbsp; <strong>So does index.html in our APP. It is a kind of unforgettable APP memory loader</strong>.</p>
+
+<p>Anyway, we should clearly distinguish some elements on <em>index.html</em>. Mainly, <u>the head block</u> from <u>the body block</u>; and, within heading block, we should appreciate there some <strong>meta</strong>, <strong>title </strong>and <strong>stylesheet</strong> tags. As, on the body, we should distinguish, <strong>main body APP controller</strong>, plus <strong>the area catching backend GUI update events</strong> (including the main operations container), and, finally, <strong>the notification controllers</strong> by identifying the ng-controller AngularJS directives and script tags; by loading RequireJS (which will load our needed modules and backend/frontend main JS loaders). Next, I will mason on this file to darkinhabitanize the tutorial over it, but I thought it would be a good idea to let you some advantage to work on it. You can pull request to server if you want. The idea is nested to this <a href="https://github.com/aleph1888/darkinhabitant/blob/develop/src/html/index.html#L31">&quot;obelisk&quot; calling through the gateway on line 31</a>; we will have to talk about darkinhabitant obelisk and torsocks invisibility powers to get Elgg2.0-Lorea backup&#39;s data. I truly would wish here I wasn&#39;t alone, as I am, so we could discuss about it.</p>
+
+<p>Ok, I can&#39;t finish this step about darkinhabitant index page without focusing on the same year as above, 2007. In this year, a spanish professional-traitor Verstrynge&#39;s book was published, called: &laquo;Frente al Imperio: Guerra Asim&eacute;trica y Guerra Total&#39;, Foca, Madrid&raquo;. You should notice that this man started his political career on the extreme-right arch section while coming across extreme-left on his olderly years. Aren&#39;t this fucking incredible? I must confess I get a bit upset when reading this book. Netherless, just in case you are confused by that in spanish we call: &quot;el enemigo difuso&quot;, in a&nbsp; post-z&icirc;z&ecirc;kianinly looking for some text to show your people on this heavy matter of against who you should fight, maybe you can take a look to 2013 spanish-professional-traitor&#39;s book: &laquo;Contra qui&eacute;nes luchar, Ediciones Pen&iacute;nsula, Madrid&raquo;.</p>
+
+<p>Just imagining that <a href="http://nonalignedmedia.com/2015/03/french-cartoonist-zeon-arrested-anti-zionist-work/">we, the people, were fighting with stones</a> while imperialism is killing us with machine-guns. As, for example, <a href="https://lakurrealidad.files.wordpress.com/2014/09/guerraisraelpalestiona.jpeg">Palestinian matter</a>, and so on. Follows Soyos picture, l&#39;H comic illustrator:</p>
+
+<p><img alt="image" src="https://lakurrealidad.files.wordpress.com/2014/12/ataraxia_mairena.jpg" style="width:500px" /></p>
+
+<p>It is, indeed, very hard to follow being a na&icirc;ve. It is not easy to be na&icirc;f. One would need big doses of stupidity on his mind. Netherless, you, reader, should always, as it is explained <a href="https://n-1.cc/discussion/view/2096019/%C2%BFte-apuntas-a-una-hackacthon-con-codigo">on main info tutorial page</a>, remember that I&#39;m a trashed coder, periferia speaking worthless voice. So keep on your rails, while having some acid trip on a reality-substance bridge to break on through (the other side, The Doors&#39;s song here.) where the Empire can&#39;t stare at us.</p>
+
+<p>&nbsp;</p>
+
+<p><img alt="image" src="https://eartesania.files.wordpress.com/2014/01/separador.png" style="width:300px" /></p>
+
+<p><u>Step 5</u>: <strong>&quot;The IDE Start-up is over: cronotoping on the repo.&quot;</strong></p>
+
+<p>There is some grana&iuml;no&#39;s raper-poet called Aitor now on Pangloss Band that wrote and sang on an oldest Hora Zulu grana&iuml;nan rap-metal band with Paco Luque on the guitar and so on, song called: &laquo;<em>No habr&aacute; viento suficiente</em>&raquo;, what follows: &laquo;<em>... ves que hoy lo hacemos incre&iacute;ble y es posible que te parezca asequible; solamente prueba: que te entrara fiebre. Y, yo, me alegro, con mi quiebro estoy fundiendo tus fusibles, &iexcl;estilo libre! que hoy no solo bastar&aacute; con ser amable y predecible, tu postura me parece respetable, &iexcl;no me hables!: tu puntuarme mientras yo recojo el cobre. Que te sobre. Si se crea otra religion sobre los logros y milagros de este ogro lo llevar&eacute; menos negro pa poder salir de pobre; ya ver&aacute;s que un vaso de agua no puede hacer que zozobre una embarcaci&oacute;n con esta dimensi&oacute;n de este calibre. Y, ahora, estamos haciendo que el mar se nos abra, &iexcl;abracadabra!: hoy nos hemos metido por donde cubre. Es m&aacute;s de lo que hab&iacute;a ped&iacute;o: pues mi objetivo nunca ha s&iacute;o ser rey del gremio, no. M&Aacute;S BIEN ES EL APREMIO POR ESCAPAR DEL ANDAMIO: si me llevo lo com&Iacute;o por lo serv&Iacute;o seg&uacute;n convenio: se que a nadie le he ped&iacute;o yo nunca nada que no sea mi&Oacute;. (...)</em>&raquo;.</p>
+
+<p>Ok. <a href="https://github.com/aleph1888/darkinhabitant/blob/develop/src/html/index.html">Index.html</a> is like an Aleph, ain&#39;t it?</p>
+
+<p>Like an Aleph with virtual capacity to store infinite cronotopos, can&#39;t you see it? Just a <a href="https://bitmask.net/es/features/cryptography#storage-soledad">backup holder, Soledad based dark storing</a> inside the privacy of some mixed-trusted coin-joined colective, where darkinhabitant, <a href="http://wiki.unsystem.net/en">unsystemly</a>, can hold its cryptodata and Elgg2.0 federation on OpenID or so on. Rhyzomatic sowing stars, caedes vision of a d3 big-bang-coded thread of words in such order at such precisely time. Here starts the biography and literature finds the silence while introducing the <a href="http://en.wikipedia.org/wiki/Poiesis">poiesis </a>based <a href="http://fr.wikipedia.org/wiki/Internationale_situationniste">post-internationalized</a> situation of <a href="https://github.com/WhiteHouse/petitions/blob/7.x-1.x/README.md">we, the people</a>, in the world, <a href="http://fr.wikipedia.org/wiki/Serment_du_Jeu_de_paume">for the past</a>, <a href="http://en.wikipedia.org/wiki/Serment_du_jeu_de_paume">for the future</a>. Don&#39;t na&icirc;vely and na&icirc;fly take over the last two links over &quot;for the past/future&quot;. This is posz&icirc;z&ecirc;kian call for transatlantic peope party<a href="http://noalttip.blogspot.com.es/"> far from beyond coorp.&#39;s ones</a> that by demons are driven. <a href="https://www.diagonalperiodico.net/tags-tags-nombres-propios/v-vendetta">What is happening on the real-simbolic-imaginary now on</a> will not be covered but this tutorial.</p>
+
+<p><img alt="image" src="https://lakurrealidad.files.wordpress.com/2015/01/change.jpg" style="width:500px" /></p>
+
+<p>As spanish cauditian dictatorship derrocator of the Democracy 1.0 on Republican 2.0 spanish <a href="http://ca.wikipedia.org/wiki/Res_publica">res publicanitation</a> always used to say to everyone: &laquo;<a href="http://argentina.indymedia.org/news/2014/03/856865.php"><em>Usted haga como yo y no se meta en pol&iacute;tica</em></a>&raquo; &iexcl;Je, je! spanish &quot;<a href="http://info.nodo50.org/Bitcoin-y-la-peligrosa-fantasia.html">no se meta en pol&iacute;tica</a>&quot; is said in english as: <em>don&#39;t be na&icirc;ve, man!</em> <em>what are you doing by your own on<a href="http://www.lamarea.com/2015/03/28/el-efecto-snowden/"> real politiks</a>?</em></p>
+
+<p><a href="https://eartesania.wordpress.com/2015/01/09/carta-abierta-a-marvin-minsky/"><img alt="image" src="https://eartesania.files.wordpress.com/2015/01/carta_abierta_prometeo.png" style="width:200px" /></a><br />
+<img alt="image" src="https://lakurrealidad.files.wordpress.com/2011/12/3.jpg" style="width:200px" /><br />
+<a href="https://eartesania.wordpress.com/2015/01/02/carta-abierta-a-la-elite-mundial/"><img alt="image" src="https://lakurrealidad.files.wordpress.com/2015/01/carta_abierta_a_la_elite_mundial.png" style="width:200px" /></a></p>
+
+<p>See further narrative of the goal on references below [1]... nethertheless, do you know what <a href="http://en.wikipedia.org/wiki/Chronotope">a chronotope</a> could be in real, simbolic and imaginary terms? It may sound to you, in a taoistic straight ahead line to Godwin on British parlament, like from this line on, on this postz&icirc;z&ecirc;kanian JavaScript UI for a darkinhabitant tutorial, I&#39;m like to work the stones. Less <em>architectural mapa</em> than sweating the spring: she is welcomed. <a href="https://lakurrealidad.files.wordpress.com/2011/12/paisaje-interior.jpg">2015 31th March.</a></p>
+
+<p>I&#39;m going right now to start chronotoping on the repository. Join the commit&#39;s time line or the milestoned issue lists... Chronotoping like this:</p>
+
+<blockquote>
+<p>https://github.com/aleph1888/darkinhabitant/blob/master/exe/power_on</p>
+</blockquote>
+
+<p>I will be back, if you are there, just to present the framing of cronotopos on the petal. Self-explained, for sure: darkinhabitant toy will say to the audience: &laquo;Hello world!&raquo;. Keep on your rhythm while keeping safety your gpg keys. Pray to the hipocrenides just while <a href="http://en.wikipedia.org/wiki/Chronotropic">chronotropicanding </a>and <a href="http://en.wikipedia.org/wiki/Chronotype">chronotypeanding</a>.</p>
+
+<p>Aleph, <a href="https://lakurrealidad.files.wordpress.com/2014/12/poeticaro.jpg">arcadian mad</a>, a l&#39;H <a href="https://eartesania.files.wordpress.com/2015/01/carta_abierta_cuerpo_social.png">TICmason</a>, <a href="https://lakurrealidad.files.wordpress.com/2011/12/sem1306.png">lisergian-libido-sintetic transtimed</a> therapist, &iexcl;Vivan las lenguas romance!</p>
+
+<p><img alt="image" src="https://lakurrealidad.files.wordpress.com/2010/12/al-patir-machado.jpg" style="width:200px" /></p>
+
+<p>Lots of love, drtek, <a href="https://lakurrealidad.files.wordpress.com/2011/10/ba2.png">is our band</a>! Lots of <a href="https://lakurrealidad.files.wordpress.com/2014/12/a_004_c.png">love Soyos</a>, <a href="https://lakurrealidad.files.wordpress.com/2014/09/pg-4-gaza-1-epa.jpg">no-band-no-cry</a>!</p>
+
+<p><img alt="image" src="https://lakurrealidad.files.wordpress.com/2015/01/chus_colega.png" style="width:200px" /></p>
+
+<p>&nbsp;</p>
+
+<p>REFERENCES:</p>
+
+<p>[1] <a href="http://aleph1888.github.io/darkinhabitant/">&quot;Darkinhabitant, a pervert guide to TIC&quot; - 2015 - eartesania</a> - chapter two: &quot;The goal&quot;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p><strong>p.d.</strong>: Don&#39;t forget to <a href="https://lakurrealidad.files.wordpress.com/2012/02/resujetokate.gif">resujetokate</a> your ego&#39;s as the petals fall.</p>
+
+</body>
+</html>
