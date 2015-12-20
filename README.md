@@ -1,94 +1,32 @@
-Check other events taking place on [Lorea Spring-summer-autumn semipermanent-hackathon 2015] in Lorea's group on n-1.cc, 'don't just use it, join us!' 
 
 ![Don't be dicky with breaking news](https://lakurrealidad.files.wordpress.com/2014/09/informationis.png)
 
 Here and now, focusing on:
 
-Lorea - back ups APP
-===========
-
-We love flowers, and, also, we love petals falling down from above the haulm.
-
-It could be nice you start a seed. But, with this backs up APP, it could be nice you keep some petals of your Lorea.
-
-Using
-------------
-While you are managing the APP, rather than expecting to download an "exact matching replica" of your content in the cloud, try instead to imagine ontologies; then, mark as many epistemes (telegrams, photos, discussion post, etc.) considered to be inside this ontologies (ontologies are aleph-based sets); then, when you are ready, "one-click" downloading in a nice portable document format or hipertext marked language document...
-
-Running
------------
-
-You can load the extension into Chrome by going to _Extensions_, enabling _Development mode_ and clicking the _Load uncompressed extension_ button.
-
-
-Alpha!!!
------------
-![Don't be pussy with gregorian calendar!](https://lakurrealidad.files.wordpress.com/2011/02/reloj-arena.gif)
-
-We're still in [alpha](http://en.wikipedia.org/wiki/Software_release_life_cycle#Alpha) state, that means we're still changing things a lot and it's not safe at all to use the wallet.
-More information at: https://n-1.cc/discussion/view/2095202/lorea-reloaded-spring-summer-autumn-2015-plugin-inhabitant-backups
-
-You are *very welcome* to test, just remember the following:
- * Write down your seed and be always ready to use it to restore the identity.
- * First thing you should do is get familiar with creating and restoring an identity.
- * You can do: "create new identity", choose same name as before and restore, this will upgrade your store (you will still need to re add pockets and addresses, contacts etc...)
- * If you notice strange behaviour after upgrading, you should:
-    1. Restart the background process from "Lorea-backup holder" (from "manage extensions")
-    2. If that doesn't work: Clear "Lorea-backup holder" storage, (from lorea-bup_holder settings), restart chromium
-
-We have been following this procedure since the backup holder is under development without problems.
-
-*Remember*: Your data is safe as long as you *don't lose your seed* to restore later.
-
-Other than that we're not making many guarantees.
-
-
-Development
------------
-You are welcome to participate in the development by contributing or forking the code at:
-
-<https://github.com/lorea/lorea-bup_holder>
-
-More info about how to develop on the [HACKING.md](HACKING.md) document.
-
-Other useful documents are: [HD Structure](https://n-1.cc/dokuwiki/17605/doku.php?id/HDBUP_Holder), [How to Help](https://n-1.cc/dokuwiki/17605/doku.php?id=howtohelp) and [Debugging](https://n-1.cc/dokuwiki/17605/doku.php?id=debug)
-
-
-Translations
------------
-Changes to translations as well as new translations can be submitted to [Lorea's Transifex page](https://www.transifex.com/projects/p/lorea/lorea-bup_holder).
-
-Translations are periodically pulled from Transifex and merged into the git repository.
-
-**Important**: We do not accept translation changes as GitHub pull requests because the next pull from Transifex would automatically overwrite them again.
-
-
-Contact
------------
-
-Use the following resources for communication with "the team"
-
-* N-1: Lorea Reloaded Spring-Summer-Autumn 2015 [Elgg2.0 Plugin "inhabitant backups"](https://n-1.cc/tasks/view/2095737/lorea-reloaded-spring-summer-autumn-2015-plugin-inhabitant-backups)
-* IRC: #lorea (freenode)
-* [Forum](https://n-1.cc/g/lorea+code)
-* [Wiki](https://n-1.cc/dokuwiki/17605/doku.php?id=webpg)
-
-
-License
-------------
-See the license [here](COPYRIGHT)
-
-Support Us!
-------------
-
-Support our development efforts by donating to the Lorea-bup_holder multisig:
-
-    Bitcoin: http://btc.to/61x (1PsJRjeThvsJuRBxf3hnzQjH16MPA8cMmU)
-    Flattr: http://bit.ly/flattr-lorea
-    [página de donaciones] (https://n-1.cc/pg/pages/view/14884/)
-    and [page](https://n-1.cc/pg/pages/view/14888/)
-
-
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:doap="http://usefulinc.com/ns/doap#"
+         xml:lang="en"
+>
+  <doap:Project>
+    <doap:name>Polichromatic inhabitant</doap:name>
+    <doap:shortname>darkinhabitant</doap:shortname>
+    <doap:homepage rdf:resource="http://aleph1888.github.io/darkinhabitant/"/>
+    <doap:created>2015-09-24</doap:created>
+    <doap:wiki rdf:resource="https://eartesania.wordpress.com/2015/02/06/2580/"/>
+    <doap:bug-database rdf:resource="https://github.com/aleph1888/darkinhabitant/issues"/>
+    <doap:programming-language>HTML5</doap:programming-language>
+    <doap:license rdf:resource="http://creativecommons.org/licenses/by-sa/3.0/es/"/>
+    <doap:download-page rdf:resource="http://aleph1888.github.io/darkinhabitant/exe/book/book_body.html"/>
+    <doap:download-mirror rdf:resource="http://aleph1888.github.io/darkinhabitant/exe/book/tutorial.html"/>
+    <doap:repository>
+      <doap:GITRepository>
+        <doap:module>darkinhabitant</doap:module>
+        <doap:browse rdf:resource="https://github.com/aleph1888/darkinhabitant"/>
+      </doap:SVNRepository>
+    </doap:repository>
+  </doap:Project>
+</rdf:RDF>
 --
 
 > (...) «Es evidente la necesidad de un cambio en
