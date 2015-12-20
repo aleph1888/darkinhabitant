@@ -3,11 +3,13 @@
 
 Here and now, focusing on:
 
+
+```xml
+
 <?xml version="1.0" encoding="utf-8"?>
 <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
          xmlns:doap="http://usefulinc.com/ns/doap#"
-         xml:lang="en"
->
+         xml:lang="en">
   <doap:Project>
     <doap:name>Polichromatic inhabitant</doap:name>
     <doap:shortname>darkinhabitant</doap:shortname>
@@ -27,7 +29,10 @@ Here and now, focusing on:
     </doap:repository>
   </doap:Project>
 </rdf:RDF>
---
+
+```
+
+
 
 > (...) «Es evidente la necesidad de un cambio en
 profundidad, de cambiar la actual estructura y ello sólo
